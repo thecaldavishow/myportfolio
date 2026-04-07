@@ -7,11 +7,12 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="index.js"></script>
 </head>
 <body>
 
     <header>
-        <div class="logo"><a href="#">Caldavis</a></div>
+        <div class="logo" onscroll="hide()"><a href="#">Caldavis</a></div>
         
         <nav id="navbar">
             <a href="#home" class="active">Home</a>
@@ -34,11 +35,12 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Caldavis Wangaruro</h3>
+            <h1>I'm 
+                <span>Caldavis Wangaruro</span></h1>
+            <h4>A Web developer and Video Editor </h4>
            
-            <p>A Front-end Developer</p>
-            <p>Film Director</p>
-            <p>DIT expert</p>
+            <p>Ambitiouos Front-end developer and Creative Director
+           </p>
             
             
           
@@ -46,27 +48,16 @@
         </div>
         
         <div class="home-img">
-           <a href="#about"><img src="IMG_20250306_182343.jpg" href="#about" alt="Profile Picture"></a>
+           <a href="#about"><img src="pics/IMG_20250306_182343.jpg" href="#about" alt="Profile Picture"></a>
         </div>
     </section>
     <section id="about">
         <h2>Get to know me</h2>
         <div class="me-pics">
-                <p></p>
-                <div>
-                    <img src="pics/IMG-20230821-WA0011.jpg" alt="">
-                    
-                    </div>
-                <div>
-                    <img src="pics/PXL_20250907_112936415~4.jpg" alt="">
-
-                    </div>
-                <div>
-                    <img src="pics/IMG_20231228_220140_935.jpg" alt="">
-
-                    </div>
+                
+                
             </div>
-            
+            <p></p>
     </section>
 
 
@@ -81,9 +72,10 @@
                 <div class="servpc">
                         <h3>2. Camera based Packages: </h3>
                         <p>I script , direct and manage audio-visual campaigns for targeted clients. <br>
-                </div>
-                In a world where content sells , I have come up with direct and deliberate worklflows involving content generation.</p>
+                            In a world where content sells , I have come up with direct and deliberate worklflows involving content generation.</p>
             
+                </div>
+                
                 <div class="servpc">
                         <h3>3. Digital Imaging & Technical Workflow (DIT): </h3>
                         <p> expertise in managing data on-set, ensuring footage is backed up, color-consistent, and ready for post-production. </p><br>
@@ -95,7 +87,7 @@
     <section id="experiences">
         <h2>My Experiences</h2>
         <div class="exp-sec">
-            <h2>Front-end Developer</h2> 
+            <h4>Front-end Developer</h4> 
         
             
             <p>Now in the film side of my expertise has allowed worked with multiple organizations . <br>
@@ -103,11 +95,23 @@
                 
             </p>
             
-            <div>
-                     <img src="pics/IMG_6640.jpg" alt="Soccer photo">
+            <div class="column">
+                     <img src="pics/IMG_6640.jpg" alt="Soccer photo" >
+                     <img src="pics/DSC_0040.jpg" alt="Soccer photo" >
+                     <img src="pics/IMG_0154.jpg" alt="Soccer photo">
+       
                 </div>
-            <div>
-                 <img src="pics/DSC_0040.jpg" alt="Soccer photo" >
+            <div class="column">
+                 <img src="pics/IMG_20240314_092836_382.jpg" alt="Soccer photo" >
+                 <img src="pics/DSC05792.jpg" alt="Soccer photo" >
+                 
+             
+                </div>
+            <div class="column">
+                <img src="pics/PXL_20250907_112936415~4.jpg" alt="Soccer photo" >
+                <img src="pics/DSC05780.jpg" alt="Soccer photo" >
+
+               
                 </div>
          </div>
     </section>
@@ -115,10 +119,10 @@
     
     <section id="contact">
         <h2>Contact Me</h2>
-        <h3>I am open to new opportunities , idealization of concepts and collaborations so feel free to reach out.
-            You can get in touch with me through:</h3><br><br>
-            <h3>Phone Number : <a href="whatsapp.com">+254708372144</a></h3>
-            <h3>Email  :<a href="gmail.com">caldavis118@gmail.com</a></h3>
+        <p>I am open to new opportunities , idealization of concepts and collaborations so feel free to reach out.
+            You can get in touch with me through:<p><br><br>
+            <h5><i class="fa-solid fa-phone"></i> : <a href="whatsapp.com">+254708372144</a></h5>
+            <h5><i class="fa-regular fa-envelope"></i> :<a href="gmail.com"> caldavis118@gmail.com</a></h5>
               <div class="social-icons">
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a> 
                 <a href="https://instagram.com/cal_d.e.e" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -138,56 +142,6 @@
         <p>Caldavis Wangaruro &copy;</p>
     </footer>
 
-    <script>
-     
-
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navbar = document.getElementById('navbar');
-                
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navbar.classList.toggle('active');
-        });
-
-   
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navbar.classList.remove('active');
-            });
-        });
-
-   
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                navbar.classList.remove('active');
-            }
-        });
-
-       
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+  
 </body>
 </html>
