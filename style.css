@@ -380,8 +380,8 @@ section {
     display: flex;
     width: 100%;
     display: flex;
-    border: 1px dashed ;
-    border-radius: 18%;
+    border: 2px solid rgb(207, 197, 197);
+    border-radius: 20px;
     padding: 20px;
     margin: 10px;
     
@@ -433,16 +433,17 @@ section {
 
 .exp-sec{
    display: -ms-flexbox; 
-     display: flex;
+    display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 0 4px;
+  justify-content: center;
 }
 
 
 
 .column {
-  -ms-flex: 25%; /* IE10 */
+  -ms-flex: 25%; 
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
@@ -1213,6 +1214,13 @@ footer p {
     }
 }
 @media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
