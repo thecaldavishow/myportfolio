@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 :root {
-    /* Light Mode Colors (Default) */
+    /* (Default) */
     --bg-primary: rgb(180, 149, 149);
     --bg-secondary: #161616;
     --bg-dark: #e5d5d5;
@@ -24,31 +24,10 @@
     --line-height:2;
     --p-font-size: 2rem;
     --light-shadow:rgba(0,0,0,0.15);
-   
-
-    
-    /* Spacing */
     --header-padding: 1rem 9%;
     --section-padding: 5rem 9%;
 }
 
-
-[data-theme="dark"] {
-
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #0a0a0a;
-    --bg-dark: #050505;
-    --text-primary: #f0f0f0;
-    --text-secondary: #ffffff;
-    --accent: #d4655e;
-    --accent-hover: #e07070;
-    --nav-bg: #0a0a0a;
-    --card-bg: rgba(255, 255, 255, 0.08);
-    --border-color: rgba(255, 255, 255, 0.15);
-    --shadow-color: rgba(212, 101, 94, 0.4);
-
-    
-}
 
 
 * {
@@ -59,10 +38,7 @@
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    transition: background-color var(--transition-speed), 
-                color var(--transition-speed),
-                border-color var(--transition-speed),
-                box-shadow var(--transition-speed);
+    
 }
 
 html {
@@ -458,7 +434,6 @@ section {
 .exp-sec{
    display: -ms-flexbox; 
     display: flex;
-  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 0 4px;
   justify-content: center;
@@ -467,7 +442,6 @@ section {
 
 
 .column {
-  -ms-flex: 25%; 
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
