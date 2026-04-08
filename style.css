@@ -24,6 +24,7 @@
     --line-height:2;
     --p-font-size: 2rem;
     --light-shadow:rgba(0,0,0,0.15);
+   
 
     
     /* Spacing */
@@ -45,6 +46,7 @@
     --card-bg: rgba(255, 255, 255, 0.08);
     --border-color: rgba(255, 255, 255, 0.15);
     --shadow-color: rgba(212, 101, 94, 0.4);
+
     
 }
 
@@ -94,26 +96,50 @@ header {
 }
 
 .logo {
+    display: flex;
+    justify-content: space-around;
+ 
     
-    font-size: 2rem;
-    color: var(--accent);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+   
 }
 
-.logo:hover {
+.logo a:hover {
     transform: scale(1.2);
 }
 .logo a{
-
+    font-size: 2rem;
+    color: var(--accent);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
     text-decoration: none;
     color: var(--accent);
+      margin-left:20px;
 }
-#theme{
-    width: 400px;
-    height: 20px;
 
+.toggleBox {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  font-size: 22px;
+
+}
+.toggleBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  }
+  .checkM {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: #eee;
 }
 
 nav {
@@ -137,11 +163,12 @@ nav a:hover{
     color: var(--accent-hover);
     
 }
-nav a active
- {
+nav a:active 
 
+ {
     border-bottom: 3px solid var(--accent);
 }
+
 
 
 .menu-toggle {
@@ -285,10 +312,13 @@ section {
 
 #about{
       padding: 10rem 9%;
+      
 
 }
 #about h2{
     font-size: 3rem;
+    color: var(--accent);
+    text-shadow:var(--border-color);
     
      
 
@@ -334,7 +364,7 @@ section {
 
 #services h2 {
     font-size: 4rem;
-    color: var(--text-primary);
+    color: var(--accent);
     margin-bottom: 3rem;
 }
 #services h3{
@@ -388,9 +418,10 @@ section {
 
 #experiences h2 {
     font-size: 4rem;
-    color: var(--text-primary);
+    color: var(--accent);
     text-align: start;
     margin-bottom: 3rem;
+    text-shadow:var(--light-shadow);
 }
 #experiences h3 {
     font-size: 2.6rem;
@@ -467,7 +498,7 @@ section {
 }
 #contact h2 {
     font-size: 4rem;
-    color: var(--text-primary);
+    color: var(--accent);
     align-self: flex-start;
     margin-bottom: 3rem;
 
@@ -478,13 +509,14 @@ section {
     line-height:2;
     font-size: 2rem;
     transition: var(--transition-speed ,ease);
+     
 
     
   
 }
 #contact h5:hover{
     transform: scale(1.2);
-
+text-shadow: 2px 2px 8px #8dc0b77e; 
 }
 
 #contact h5 a{
