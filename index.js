@@ -1,19 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // MOBILE MENU TOGGLE
-   
+        
+    var themeSwitch = document.getElementById('themeSwitch');
+    var html = document.documentElement;
     
+    if (themeSwitch) {
+        // Load saved theme
+        var savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        
+        // Sync toggle state
+        if (savedTheme === 'dark') {
+            themeSwitch.checked = true;
+        }
+        
+        // Listen for toggle changes
+        themeSwitch.addEventListener('change', function() {
+            var newTheme = this.checked ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+    
+
+    // MOBILE menu toggle
+   
     var mobileMenuBtn = document.getElementById('mobileMenu');
     var navbar = document.getElementById('navbar');
     
     if (mobileMenuBtn && navbar) {
         mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            
+           e.preventDefault(); 
             
             mobileMenuBtn.classList.toggle('active');
-            
-           
             navbar.classList.toggle('active');
         });
         
@@ -35,17 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 navbar.classList.remove('active');
             }
         });
-
 }
-
-
     
     var header = document.querySelector('header');
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {  
-            header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.25)';  
-            header.style.backgroundColor = '#e5d5d5';
+            header.style.boxShadow = '0 10px 20px var(--light-shadow)';
+            header.style.backgroundColor = 'var(--bg-dark)';
         } else {
             
             header.style.boxShadow = 'none';  
@@ -53,37 +68,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     
-
 // CONTACT FORM HANDLER
     
-    var contactForm = document.querySelector('form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+   const form = document.querySelector('form');
+
+   
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-          
-            var formData = new FormData(contactForm);
-            var data = {};
-            formData.forEach(function(value, key) {
-                data[key] = value;
-            });
+           const formData = new FormData(form);
+           const data = Object.fromEntries(formData.entries());
+        
+        
+           
             
             console.log('Form submitted:', data);
             
+       
             
-            alert('Thank you for your message! I');
+            alert('Thank you for your message! ');
             
-            
-            contactForm.reset();
-        });
-    }
-    
-    console.log('Portfolio JavaScript loaded successfully!');
+            form.reset();
+        });   
 
+  
 
-
-
-
-        
 });

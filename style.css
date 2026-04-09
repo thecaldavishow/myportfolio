@@ -1,12 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
 :root {
     /* (Default) */
     --bg-primary: rgb(180, 149, 149);
     --bg-secondary: #161616;
     --bg-dark: #e5d5d5;
+    --header:#e5d5d5;
     --text-primary: rgb(0, 0, 0);
     --text-secondary: #ffffff;
     --accent: #b74b4b;
@@ -27,6 +27,26 @@
     --header-padding: 1rem 9%;
     --section-padding: 5rem 9%;
 }
+
+/* Dark mode palletes*/
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #0a0a0a;
+    --header:black;
+    --bg-dark: #050505;
+    --nav-dark:#e5d5d5;
+    --text-primary: #f0f0f0;
+    --text-secondary:  #d4655e;
+    --accent: #d4655e;
+    --accent-hover: #e07070;
+    --nav-bg: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(212, 101, 94, 0.4);
+}
+
+
+
 
 
 
@@ -62,7 +82,7 @@ header {
     left: 0;
     width: 100%;
     padding: var(--header-padding);
-    background-color: transparent;
+    background-color: var(--bg-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,6 +90,7 @@ header {
 
     
 }
+
 
 .logo {
     display: flex;
@@ -94,33 +115,79 @@ header {
 }
 
 .toggleBox {
-  display: block;
-  position: relative;
-  padding-left: 50px;
-  cursor: pointer;
-  font-size: 22px;
+   
+    position: relative;
+    width: 60px;
+    height: 30px;
+    content: " ";
+   
 
 }
 .toggleBox input {
+   
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
+  transition: var(--transition-speed);
   }
-  .checkM {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 50px;
-  border-radius: 25px;
-  background-color: #eee;
+
+.checkM{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    transition: var(--transition-speed);
+  }
+
+  .checkM:before {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    transition: var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
 }
+
+input:checked + .checkM {
+    color: var(--bg-dark);
+    background-color: var(--accent);
+    border-color: var(--text-primary);
+}
+
+input:checked + .checkM:before {
+    transform: translateX(30px);
+    background-color: var(--text-primary);
+}
+
+
+
+.toggleBox span:hover{   
+  
+    transform: scale(1.1)
+
+}
+
+
+
+
 
 nav {
     display: flex;
     align-items: center;
+    
 }
 
 nav a {
@@ -133,17 +200,22 @@ nav a {
 }
 
 
-
+nav #navabar  {
+    background-color: var(--nav-bg);
+}
 nav a:hover{
     transform: scale(1.1);
     color: var(--accent-hover);
+    border-bottom: 3px solid var(--accent);
     
 }
-nav a:active 
+nav a:active
 
  {
-    border-bottom: 3px solid var(--accent);
+    color: var(--bg-secondary);
+    border-bottom: 3px solid var(--bg-secondary);
 }
+
 
 
 
@@ -263,31 +335,11 @@ section {
 
 
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: var(--bg-dark);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: var(--accent);
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    border: 2px solid var(--accent);
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: scale3d(1.03);
-    background-color: var(--accent);
-    color: var(--bg-dark);
-    box-shadow: 0 0 25px var(--shadow-color);
-}
-
 
 
 #about{
       padding: 10rem 9%;
+    
       
 
 }
@@ -348,6 +400,7 @@ section {
     text-align: center;
     font-size: 2rem;
 
+
 }
 
 #services p {
@@ -382,7 +435,7 @@ section {
 }
 .servpc h3{
     align-self: center;
-    color: var(--bg-secondary);
+    ;
 }
 
 
@@ -465,6 +518,7 @@ section {
    
     
 }
+
 #contact p{
     font-size: var(--p-font-size);
     line-height: var(--line-height);
@@ -483,6 +537,7 @@ section {
     line-height:2;
     font-size: 2rem;
     transition: var(--transition-speed ,ease);
+    text-shadow: var(--bg-secondary); 
      
 
     
@@ -490,12 +545,12 @@ section {
 }
 #contact h5:hover{
     transform: scale(1.2);
-text-shadow: 2px 2px 8px #8dc0b77e; 
+    text-shadow: var(--bg-secondary); 
 }
 
 #contact h5 a{
-      color: var(--bg-secondary);
-      letter-spacing: var(--letter-spacing);
+       color: var(--nav-dark);
+      letter-spacing: var(--letter-spacing)
     }
 
 .social-icons {
@@ -542,8 +597,11 @@ text-shadow: 2px 2px 8px #8dc0b77e;
 
 #contact form input,
 #contact form textarea {
+    padding: 20px;
+    letter-spacing: var(--letter-spacing);
+
     width: 100%;
-    padding: 1.5rem 2rem;
+    padding: 1.5 rem 2 rem ;
     background-color: var(--bg-secondary);
     color: var(--text-secondary);
     border: 2px solid var(--border-color);
@@ -569,7 +627,7 @@ text-shadow: 2px 2px 8px #8dc0b77e;
     align-self: center;
     cursor: pointer;
     padding: 1rem 3rem;
-    color: var(--bg-dark);
+    color: var(--text-secondary);
     font-family: var(--p-font-family);
 }
 
@@ -941,22 +999,7 @@ footer p {
         font-size: 1.9rem;
         margin: 2rem 0;
     }
-    
-    .theme-toggle {
-        width: 55px;
-        height: 28px;
-    }
-    
-    .toggle-slider:before {
-        height: 20px;
-        width: 20px;
-        font-size: 10px;
-    }
-    
-    input:checked + .toggle-slider:before {
-        transform: translateX(26px);
-    }
-    
+ 
     #services,
     #experiences,
     #contact {
@@ -1198,17 +1241,7 @@ footer p {
     }
 }
 
-/*  HIGH DPI / RETINA DISPLAYS */
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi) {
-    .home-img img {
-        box-shadow: 0 0 30px solid var(--accent);
-    }
-    
-    .social-icons a:hover {
-        box-shadow: 0 0 30px var(--shadow-color);
-    }
-}
+
 
 /* REDUCED MOTION PREFERENCE  */
 @media (prefers-reduced-motion: reduce) {
@@ -1227,7 +1260,6 @@ footer p {
 @media print {
     header,
     .menu-toggle,
-    .theme-toggle,
     .social-icons,
     .btn,
     .home-img {
