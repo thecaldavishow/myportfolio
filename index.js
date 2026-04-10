@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {  
-            header.style.boxShadow = '0 10px 20px var(--light-shadow)';
-            header.style.backgroundColor = 'var(--bg-dark)';
+            header.style.boxShadow = '0 5px 20px var(--md-sys-color-shadow)';
+           
         } else {
             
             header.style.boxShadow = 'none';  
