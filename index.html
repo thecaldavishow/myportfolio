@@ -7,32 +7,62 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="index.js"></script>
+    <script src="script.js"></script>
     <link rel="shortcut icon" href="pics/logo.png" type="image/x-icon">
 </head>
-<body>
+<body >
 
-    <header class="header">
-        <div class="logo" >
-            <label class="toggleBox">
-                    <input type="checkbox" id="themeSwitch" >                    
-                    <span class="checkM"></span>
-            </label>
-            <a href="#">Caldavis</a>
-                
-        </div>        
+    <header>
         
-        <nav id="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about" >About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            
+          
+                        <input id="checkboxInput" type="checkbox" />
+                        <label class="toggleSwitch" for="checkboxInput">
+                        <div class="icon icon--moon theme-icon">
+                            <svg
+                            class="moon theme-icon" 
+                          
+                            viewBox="0 0 24 24"
+                           
+                            width="25"
+                            height="25"
+                            >
+                            <path
+                                fill-rule="evenodd"
+                                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                               
+                            ></path>
+                            </svg>
+                        </div>
+
+                        <div class="icon icon--sun theme-icon">
+                            <svg
+                            class="sun theme-icon"
+                          
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            width="25"
+                            height="25"
+                            >
+                            <path
+                            
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                            ></path>
+                            </svg>
+                        </div>
+                        </label>
+
+                                            
            
-        </nav>
-        
-    
+            <div>
+                    <nav id="navbar">
+                        <a href="#home" class="active">Home</a>
+                        <a href="#about" >About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>                
+                </nav>
+            
+      </div>
         <div class="menu-toggle" id="mobileMenu">
             <span></span>
             <span></span>
@@ -41,8 +71,13 @@
     </header>
 
 
-    <section class="home" id="home">
-        <div class="home-content">
+    <section class="reveal reveal-bottom container" id="home">
+      
+        
+        <div id="home-content" class="reveal reveal-left delay-2">
+            <div class=" reveal reveal-right delay-2 home-img">
+                   <img src="pics/IMG_20250306_182343.jpg" href="#about" alt="Profile Picture">
+             
             <div>
                 <h1>Hi I'm <span>Caldavis Wangaruro</span></h1> 
             </div>
@@ -51,33 +86,32 @@
                     <h4>Tech-Creative.</h4>
                     <h4>A Web designer and web developer.</h4>
                 </div>
+                    
            
         </div>
         
-        <div class="home-img">
-           <a href="#about"><img src="pics/IMG_20250306_182343.jpg" href="#about" alt="Profile Picture"></a>
-        </div>
+        
     </section>
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>More about Caldavis</h2>
-        <div class="meCards">
+        <div class="meCards reveal reveal" >
                 
-             <div class="sCard"> 
+             <div class="sCard reveal reveal-top delay-2"> 
                 <h3>Growth</h3>
                 <p>Born and raised in Nairobi , Kenya. </p>
               
              </div>
-             <div class="sCard"> 
+             <div class="sCard reveal reveal-bottom delay-2"> 
                 <h3>Education</h3>
                 
                 <p>Currently pursuing a Degree in B.Sc Computer Science.</p>
              </div>
-             <div class="sCard"> 
+             <div class="sCard sCard reveal reveal-top delay-2"> 
                <h3>Interests</h3>
                 <p>Web development and design , </p>
                 
              </div>
-             <div class="sCard"> 
+             <div class="sCard sCard reveal reveal-top delay-2"> 
                 <h3>Location</h3>
                 <p>I am based in Nyeri County</p>
              </div>
@@ -89,46 +123,58 @@
     </section>
 
 
-    <section id="skills">
-        <h2>Professional Skills</h2>
-            <div class="my-serv">
-                <div class="servpc">            
-                
-                        <h3><b>1.Web Design and Development: </b></h3>
-                        <p>I develop well maintained websites that suite my clients' desires.</p>
+    <section id="skills" class="reveal">
+        <h2>Skills</h2>
+            <div class="my-serv reveal reveal-top" >
+                <div class="servpc one">            
+                                            <h3>HTML</h3>
+                        <p>I develop well maintained wites that suite my clients' desires.</p>
                      </div>
-                     <div class="servpc">
-                        <h3><b>2.UI/UX: </b></h3>
-                        <p>I focus on building fully responsive, user-centric interfaces that deliver clarity </p>
-                </div>
-                <div class="servpc">
-                    <h3><b>3.Digital Imaging Technology (DIT): </b></h3>
-                        <p>I handle , maintain and secure visual data and ensure it is easily tracable upon being called upon , </p>
-                
-        </div>
+                     <div class="servpc two">
+                        <h3>CSS</h3>
+                        <p>I focus onilding fully responsive, user-centric interfaces that deliver clarity </p>
+                     </div>
+                            <div class="servpc three">
+                                <h3>UI/UX</h3>
+                                    <p>I handle , maintain and secure visual data and ensure it is easily trace uponing called upon , </p>
+                            
+                                </div>
+                            <div class="servpc four">
+                                <h3>JS</h3>
+                                    <p>I handle , maintain and secure visual data and ensure it is easily trace uponing called upon , </p>
+                            
+                                </div>
+                            <div class="servpc five">
+                                <h3>REACT</h3>
+                                    <p>I handle , maintain and secure visual data and ensure it is easily tracable upon being called upon , </p>
+                            
+                                </div>
+                          
+             </div>
+
 </section>
     
-    <section id="projects">
+    <section id="projects" class="reveal">
         <h2>Projects</h2>
-   <div class="meCards">
+        <div  id="projCards">
         
-            <div class="sCard"> 
-                
-                <h3>FaceBook Landing Page</h3>
-                <button><a href="https://fb-flexbox.vercel.app/">View</a></button>
-             </div>
-             <div class="sCard"> 
-                 <h3>Goal-Counter Website</h3>
-                
-                <button><a href="https://passenger-counter-app-gray.vercel.app/">View</a></button>
-             </div>
-             <div class="sCard"> 
-               <h3>Portfolio Templates
-                ggg
-               </h3>
-              
-                <button><a href="">View</a></button>
-             </div>
+                <div  id="projCard" class="reveal reveal-left">
+                    <div class="imgholder">
+                        <img src="pics/Screenshot 2026-04-13 165913.png" alt="FaceBook landing page" width="200px">
+                    </div> 
+                    <p>FaceBook Landing Page</p>
+                    <button><a href="https://fb-flexbox.vercel.app/">View</a></button>
+                </div>
+                <div id="projCard" class="reveal reveal-top"> 
+                           <img src="pics/Screenshot 2026-04-13 165913.png" alt="FaceBook landing page" width="200px">
+                         <p>Goal-Counter Website</p>                
+                        <button><a href="https://passenger-counter-app-gray.vercel.app/">View</a></button>
+                </div>
+                <div id="projCard" class="reveal reveal-right"> 
+                    <img src="pics/Screenshot 2026-04-13 165913.png" alt="FaceBook landing page" width="200px">
+                    <p>Portfolio Templates </p>
+                    <button><a href="">View</a></button>
+                </div>
           
         
             
@@ -145,38 +191,81 @@
     </section>
 
     
-    <section id="contact">
+    <section id="contact" class="reveal ">
         <h2>Get in touch</h2>
-        <p>For any enquiries ,reach me through:</p>
-           <h5 title="click"><a href="https://wa.me/+254708372144"></a><i class="fab fa-whatsapp"></i> Send me a text</a></h5>
-            <h5 title="click"> <a href="mailto:caldavis118@gmail.com"></a><i class="fa-regular fa-envelope" ></i> Email me</a></h5>
-              <div class="social-icons">
-                <a href="https://github.com/thecaldavishow" aria-label="GitHub"><i class="fab fa-github"></i></a> 
-                <a href="https://instagram.com/cal_d.e.e" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              
-            </div>
-            
-        <form >
-            
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required autocomplete="on">
-            <input type="tel" placeholder="Mobile Number"  maxlength="13">
-            <textarea placeholder="Your Message" minlength="10" maxlength="200"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+            <div class="contact-info">
+                <div class="firstlinks reveal reveal-left">
+                    <a href="https://wa.me/+254708372144"><i class="fab fa-regular fa-whatsapp"></i> 0708372144</a>
+                    <a href="mailto:caldavis118@gmail.com"><i class="fab fa-envelope" ></i> caldavis118@gmail.com</a>
+                    <a href="https://github/thecaldavishow"><i class="fab fa-github"> Github</i></a>
+                    <a href="https://instagram.com/cal_d.e.e" target=""><i class="fab fa-instagram" > @cal_D.e.e</i></a>
+                 </div>
+                <div class=" reveal reveal-top delay-1 " id="form">
+                                                
+                            <form class="form">
+                                
+                                <div class="flex">
+                                    <label>
+                                        <input class="input" type="text" placeholder="" required="">
+                                        <span>first name</span>
+                                    </label>
 
-    
+                                    <label>
+                                        <input class="input" type="text" placeholder="" required="">
+                                        <span>last name</span>
+                                    </label>
+                                </div>  
+                                        
+                                <label>
+                                    <input class="input" type="email" placeholder="" required="">
+                                    <span>email</span>
+                                </label> 
+                                    
+                                <label>
+                                    <input class="input" placeholder="" type="tel" required="">
+                                    <span>contact number</span>
+                                </label>
+                                <label>
+                                    <textarea class="input01" placeholder="" rows="3" required="" maxlength="100"></textarea>
+                                    <span>message</span>
+                                </label>
+                                
+                                <button class="fancy">
+                                
+                                <span class="text">submit</span>
+                              
+                                </button>
+                            </form>
+                        <div class="popup" id="successPopup">
+                
+
+                                <p>Message Sent Successfully!</p>
+                                <button class="popup-close" id="closePopup">OK</button>
+                            </div>
+                                            
+                        
+                </div>
+            </div>
+        
+</section>
+
+    <div class="fab-container">
+        <button class="fab-button">
+           <i class="fa fa-thin fa-headset"></i></button>
+           <span class="tooltip">
+                <label for="">
+                    TEL: 0708372144
+                </label>
+
+           </span>
+     
+    </div>
     <footer> 
-        <div class="footer-content">
-               
-                <a href="https://github.com/thecaldavishow" aria-label="GitHub"><i class="fab fa-github"></i></a> 
-                <a href="https://instagram.com/cal_d.e.e" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://instagram.com/cal_d.e.e" aria-label="fa-whatsapp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-            <p>Caldavis Wangaruro &copy;</p>
+      
+ 
+        
+            <p>Caldavis Wangaruro 2026 &copy;</p>
     </footer>
 
-  
 </body>
 </html>
