@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         var themeSwitch = document.getElementById('checkboxInput');
         var html = document.documentElement;
- 
+        var themeIcon = document.querySelector('.theme-icon');
     
     if (themeSwitch) {
         
@@ -26,7 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
             themeSwitch.checked = true;
         }
                   
-        
+         function updateThemeIcon(theme) {
+            if (themeIcon) {
+                if (theme === 'dark') {
+                    themeIcon.classList.remove('icon--sun');
+                    themeIcon.classList.add('icon--moon');
+                } else {
+                    themeIcon.classList.remove('icon--moon');
+                    themeIcon.classList.add('icon--sun');
+                }
+            }
+        }
+
+         updateThemeIcon(savedTheme);
+
         // Listen for toggle changes
         themeSwitch.addEventListener('change', function() {
             
@@ -254,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 
-       var pageHeader = document.querySelector('header');
+    var pageHeader = document.querySelector('header');
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -263,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
             pageHeader.classList.remove('scrolled');
         }
     });
-    
 
     
     console.log('Portfolio JavaScript loaded successfully!');
