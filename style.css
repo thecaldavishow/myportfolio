@@ -616,7 +616,6 @@ section {
     justify-content: center;
     justify-self: center;
     max-width: 100%;
-    width:fit-content;
     align-items: center;
     padding: 1rem;
     margin: 2rem;
@@ -829,21 +828,8 @@ section {
      letter-spacing: 1px;
      font-family: 'Montserrat' , serif;
    } 
-.projCard .text{
- font-family: 'Montserrat' , serif;
-  font-size: 14px;
-  line-height: 1.1em;
-  display: block;
-  text-align: start;
-  transition: all 0.3s ease-in-out;
-  text-transform: lowercase;
-  text-decoration: none;
-  transform: translateX(20%);
-}
-.projCard button:hover::before {
-  width: 1.5rem;
-  background: var(--mds-color-primary);
-}
+
+
 .projCard button .text{
     font-family: 'Montserrat' , serif;
   font-size: 14px;
@@ -933,9 +919,10 @@ section {
 #contact {
     background-image: url(pics/handshake.jpg);
    
-    background-position: center ;
-    background-size:cover  ;
-    background-repeat: no-repeat;  
+
+    background-size:cover ;
+    background-repeat: no-repeat ;  
+    background-position: center;
  
     object-fit: contain;
     display: flex;
@@ -992,7 +979,7 @@ margin-right: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 5rem;
-    width: 35rem;
+    width: 30rem;
     text-align: start;
     text-decoration: none;
     background-color: var(--md-sys-color-surface);
@@ -1041,7 +1028,7 @@ margin-right: 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 350px;
+  max-width: 300px;
   background-color:  var(--md-sys-color-surface);
   padding: 20px;
   border-radius: 10px;
@@ -1504,7 +1491,9 @@ footer p {
         width: 30px;
         height: 3px;
     }
-    
+    #projects{
+        height: 100vh;
+    }
     #skills h2,
     #projects h2,
     #contact h2 {
@@ -1516,12 +1505,7 @@ footer p {
         font-size: 1.5rem;
     }
     
-    .social-icons a {
-        width: 4.5rem;
-        height: 4.5rem;
-        font-size: 2.2rem;
     }
-}
 
 /* MEDIA QUERIES - Large Phones (576px) */
 @media (max-width: 576px) {
@@ -1576,20 +1560,8 @@ footer p {
         margin-bottom: 2rem;
     }
     
-    #contact form {
-        padding: 0 1rem;
-    }
-    
-    .social-icons {
-        gap: 0.8rem;
-    }
-    
-    .social-icons a {
-        width: 4rem;
-        height: 4rem;
-        font-size: 2rem;
-        margin: 1rem 0.8rem 1rem 0;
-    }
+  
+
     
     .btn {
         padding: 1rem 2.2rem;
@@ -1676,19 +1648,13 @@ footer p {
     .servpc{
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
-    border: 1px dashed ;
+
     border-radius: 18%;
     padding: 20px;
     margin: 10px;    
     
 }
-    .social-icons a {
-        width: 4.2rem;
-        height: 4.2rem;
-        font-size: 1.8rem;
-    }
-    
+        
     .btn {
         padding: 1rem 2rem;
         font-size: 1.3rem;
@@ -1758,8 +1724,7 @@ footer p {
     }
     .servpc{
     display: block;
-    width: 100%;
-    border: 1px dashed ;
+
     border-radius: 18%;
     padding: 20px;
     margin: 10px;
@@ -1769,23 +1734,13 @@ footer p {
     
 }
     
-    .social-icons a {
-        width: 4rem;
-        height: 4rem;
-        font-size: 1.6rem;
-    }
     
     .btn {
         padding: 0.9rem 1.8rem;
         font-size: 1.2rem;
     }
     
-    #contact form input,
-    #contact form textarea {
-        padding: 1rem 1.2rem;
-        font-size: 1.3rem;
-    }
-   
+ 
 }
 
 /* MEDIA QUERIES - Extra Small (320px  */
@@ -1819,22 +1774,13 @@ footer p {
         gap: 0.5rem;
     }
     
-    .social-icons a {
-        width: 3.8rem;
-        height: 3.8rem;
-        font-size: 1.5rem;
-    }
-    
+        
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
     }
     
-    #contact form input,
-    #contact form textarea {
-        padding: 0.9rem 1rem;
-        font-size: 1.2rem;
-    }
+ 
    
 }
 
@@ -1874,12 +1820,7 @@ footer p {
         margin: 1.5rem 0;
     }
     
-    .social-icons a {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.6rem;
-    }
-    
+        
     .btn {
         padding: 0.8rem 2rem;
         font-size: 1.3rem;
