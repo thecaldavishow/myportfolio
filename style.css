@@ -215,10 +215,10 @@ header {
     z-index: 100;}
 
  header.scrolled {
-    padding: 1rem 5%;
+    padding: 1rem 2%;
     background-color: var(--md-sys-color-surface);
     filter: brightness(1.1);
-    filter: opacity(90%);
+    filter: opacity(95%);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -235,14 +235,23 @@ header {
   position: relative;
   place-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
   line-height: 1;
   overflow: hidden;
+scale: calc(92%);
+}
+
+.sun{
+    scale: calc(90%);
+}
+.moon{
+    scale: calc(90%);
 }
 
 #checkboxInput {
   display: none;
 }
+
 
 .icon {
   grid-column: 1 / 1;
@@ -254,25 +263,28 @@ header {
   z-index: 2;
   transform-origin: center center;
   transition:
-    transform 500ms ease,
-    opacity 300ms ease;
+    transform 500ms ease ease-in-out,
+    opacity 300ms ease ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
 
-.icon--moon {
+.icon--moon{
   color:var(--md-sys-color-surface);
   background-color:var(--md-sys-color-primary);
   border-radius: 50%;
+   transition: all ease-in-out;
 }
-.icon--sun {
+.icon--sun{
+    
   color:var(--md-sys-color-surface);
   background-color:var(--md-sys-color-primary);
   border-radius: 50%;
+   transition: all ease-in-out;
 }
 
 .icon--moon,
-.icon--sun {
+.icon--sun{
   transform: rotate(0deg) scale(0);
   opacity: 0;
 }
@@ -305,7 +317,6 @@ header {
 
 
 
-
 header #navbar {
     display: flex;
     align-self: center;
@@ -328,8 +339,8 @@ nav a {
 
 
 nav a:hover {
+    transition: all ease-in-out;
     transform: translateY(2px);
-    color: var(--md-sys-color-on-secondary);
     color: var(--md-sys-color-secondary-container);   
 
 }
@@ -338,10 +349,9 @@ nav a:hover {
 
     
 
-nav a:hover,
 nav a.active {
     transform: scale(1.02);
-    height: 100%;
+
 }
 
 
@@ -379,6 +389,7 @@ section {
 
     min-height: 100vh;
     padding: var(--section-padding);
+    width: 100vw;
 
     
 }
@@ -530,7 +541,10 @@ section {
     
   
 }
-#home-content span{
+.hi{
+    color: var(--md-sys-color-surface) ;
+}
+#home-content .name{
     font-weight: 500;
     color: var( --md-sys-color-surface);
     padding: 5px ;
@@ -596,19 +610,6 @@ section {
     line-height: var(--lineH);
 }
 
-.meCards{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    justify-self: center;
-    max-width: 100%;
-    width:fit-content;
-    align-items: center;
-    transition: all var(--trans);
-    margin-bottom: 5rem;
-    
-
-}
 #projCards{
     display: flex;
     flex-flow: row wrap;
@@ -617,81 +618,24 @@ section {
     max-width: 100%;
     width:fit-content;
     align-items: center;
-    
-
-}
-.sCard{
-
-    display: flex;
-    flex-flow: row nowrap;
-    border-radius: var(--border-radius);
-    overflow:hidden;
-    margin: 1rem;
-    width: 200px;
-    height:60px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;    
-    background-color: var(--md-sys-color-surface);
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease ease-in-out, box-shadow 0.3s ease ease-in-out;
-    padding: 5px;
-  
-} 
-
-.sCard p{
-    opacity: 0;
-    transition: var(--transQuick);
-    font-size: var(--text);
-    line-height: var(--lineH);
+    padding: 1rem;
+    margin: 2rem;
     
 }
-
-.sCard:hover{  
-    margin: 1rem;
-    width: 300px;
-    height:100px;;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    justify-content:left;
-     box-shadow: 0 0 4px var(--md-sys-color-surface-tint)
-  
-
-} 
-
-.sCard h3{
-    width: 50%;
-    justify-self: start;
-    text-align: center;
-    color: var(--md-sys-color-on-surface);
-    font-weight: 500;
-    font-size: var(--text);
-    transition: var(--trans);
-    margin: 1rem;
+#projects{
+    height: 60vh;
     
-}
-
-.sCard:hover p{
-    padding-right: 1rem;
-    visibility: visible;
-    opacity: 1;
-    margin-bottom: 1px;
-  
-}
-.sCard:hover h3 ,
-.sCard:hover  p{
-    scale: calc(70%);
-  
 }
 
 #projCard{
+    
     display: flex;
     flex-flow: column nowrap;
     border-radius: var(--border-radius);
     overflow: hidden;
     margin: 1rem;
     width: 200px;
-    height:300px;
+    height:220px;
     justify-content: space-between;
     align-items: center;
     margin: 10px;    
@@ -705,8 +649,8 @@ section {
 } 
 #projCard p{
     text-align: justify;
-    font-size: var(--subtSize);
-    padding: 1rem;
+    font-size: var(--text);
+    padding: 0.5rem;
     color: var(--md-sys-color-on-primary-container);
 
     
@@ -729,39 +673,26 @@ section {
     margin-bottom: 10px;
     padding: 0 ;
 }
-
+#skills::before{
+    background-image: url(pics/imacsetup.jpg);
+    background-position:center;
+    background-size: cover;
+}
 
 #skills {
-    
-    height: 100%;
-    background-color: var(--md-sys-color-surface);
-    background: linear-gradient(135deg, var(--md-sys-color-on-surface), #9ea8b8 0 31.25%, #0000 0),
-    linear-gradient(45deg, var(--md-sys-color-on-surface), #dee1e4 0 31.25%, #0000 0),
-    linear-gradient(135deg,var(--md-sys-color-on-surface), hsl(216, 10%, 90%) 0 31.25%, #0000 0),
-    linear-gradient(45deg,var(--md-sys-color-on-surface), var(--md-sys-color-surface-tint) 0 31.25%, #043c5d00 0);
-     background-size: 60px 60px;
-     
-    background-position:
-    
-    0 0,    0 0,   30px 30px,    30px 30px;
-  animation: slide 4s linear infinite;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: url(pics/imacsetup.jpg);
+    background-size: cover;
+
+  
 }
 
-@keyframes slide {
-  to {
-    background-position:
-      60px 0,
-      60px 0,
-      90px 30px,
-      90px 30px;
-  }
-}
- 
+#skills .exmada{
 
-
-#skills h2 {
     font-size: var(--titleSize);
-    color: var(--md-sys-color-on-surface-container);
+    color:white;
     margin-bottom: 2rem;
 }
 #exptext .hovered{
@@ -855,6 +786,10 @@ section {
 
 
 #projects {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-self: center;
     min-height: 90vh;
     background-color: var(--md-sys-color-surface);
     padding-bottom: 0%;
@@ -984,12 +919,12 @@ section {
     object-fit: contain;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
     margin-bottom: 0;
     width: 100vw;
-    height: 100vh;
-   
-   
+    height: 50vh;
+    box-shadow: 10px 0px 10px var(--md-sys-color-on-surface) ;
     
 }
 #contact .mada{
@@ -1022,13 +957,13 @@ section {
     width: 30%;
     min-width: 10rem;
     letter-spacing: 0.6px;
- 
+    margin: 2rem;
    
 }
 .firstlinks i{
    
 margin: 10px;
-margin-right: 20px;
+margin-right: 25px;
 }
 .firstlinks a{
     
@@ -1045,7 +980,7 @@ margin-right: 20px;
     align-self: center;
     margin: 10px;
     font-family: 'Montserrat' , serif;
-    font-size: var(--text);
+    font-size: 1.5rem;
     border-radius: var(--border-radius);
     margin: 5px;
     color: var(--md-sys-color-primary);  
@@ -1066,24 +1001,7 @@ margin-right: 20px;
 
 }
 
-#contact h5{
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    justify-self:center;
-    border: 1px solid black;
-    border-radius: var(--border-radius);
-    width: 300px;
-    padding: 15px;
-    font-size: var(--text);
-    transition: var(--trans);
-    text-shadow: var(--bg-secondary); 
-    margin:10px 20px ;
-     
 
-    
-  
-}
 
 .firstlinks a:hover {
     color: var(--md-sys-color-on-surface);
@@ -1098,6 +1016,7 @@ margin-right: 20px;
 
 
 .form {
+    scale: calc(90%);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1117,7 +1036,7 @@ margin-right: 20px;
 .flex {
   display: flex;
   width: 100%;
-  gap: 6px;
+  gap: 5px;
 }
 
 .form label {
