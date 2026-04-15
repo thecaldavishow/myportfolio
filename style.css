@@ -726,11 +726,10 @@ section {
     border-radius: var(--border-radius);
     overflow:hidden;
     margin: 1rem;
-    width: 200px;
+    width: 100px;
     height:60px;
     justify-content: center;
-    align-items: center;
-    margin: 10px;    
+    align-items: center;   
     background-color: var(--md-sys-color-surface-container);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -741,15 +740,17 @@ section {
 }
 
 .servpc h3{
+ 
     align-self: center;
     justify-content: center;
     text-align: center;
     font-size: 2.2rem;
     font-weight: 500;
     opacity: 0;
-    transition: var(--trans) ease-in-out;
+    transition: var(--trans);
     z-index: -1000;
     color: var(--md-sys-color-on-surface);
+    
     
     
 }
@@ -760,14 +761,16 @@ section {
     transition:var(--transSlow) ;
     align-self: center;
     justify-self: center;
-    text-align: center;   
+    text-align: center;
+    position: absolute;  
+    margin: 1rem; 
     
 }
 
 .servpc:hover{
 
     margin: 1rem;
-    width: 200px;
+    width: 100px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
     transform: scale(1.02);
@@ -777,12 +780,14 @@ section {
 .servpc:hover h3{
     visibility: visible;
     opacity: 1;
-    z-index: 1000;
+    position: absolute;
+    margin: 1rem;
+    z-index: 1;
  
 }
 .servpc:hover i{
 
-    transform:translateX(50px);
+   opacity: 0;
     transition: ease-in-out;
 }
 
