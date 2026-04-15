@@ -484,7 +484,7 @@ section {
     gap: 5rem;
     min-height: 100vh;
     overflow: hidden; /* Keeps the blurred edges from spilling out */
-    
+   
    
     
 }
@@ -546,25 +546,9 @@ section {
     line-height: var(--lineH);
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-
-
-
+#about{
+    background: var(--md-sys-color-surface-container);
+}
 #about .mada{
     font-size: var(--titleSize);
     color: var(--md-sys-color-on-surface);
@@ -584,13 +568,10 @@ section {
     min-width: 200px;
     height: 50%;
     padding: 0px;
-    
-    
-
 
 }
 
-#about img {
+#about img{
 
     scale: calc(60%);
     padding: 0px;
@@ -600,16 +581,13 @@ section {
     cursor: pointer;
     transition: 0.2s linear;
     box-shadow: 0 0 5px var(--md-sys-color-secondary) ;
-    
- 
-
-    
+   
 }
-.home-img img:hover {
+.home-img img:hover{
     transform: scale(1.02);
 }
  
-#about p{
+ #about .ab-text{
     font-size: var(--text);
     color: var(--md-sys-color-on-surface);
     box-shadow:var(--border-color);
@@ -619,7 +597,7 @@ section {
 }
 
 .meCards{
-  display: flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     justify-self: center;
@@ -628,7 +606,6 @@ section {
     align-items: center;
     transition: all var(--trans);
     margin-bottom: 5rem;
-    
     
 
 }
@@ -646,7 +623,7 @@ section {
 .sCard{
 
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     border-radius: var(--border-radius);
     overflow:hidden;
     margin: 1rem;
@@ -655,13 +632,12 @@ section {
     justify-content: center;
     align-items: center;
     margin: 10px;    
-    background-color: var(--md-sys-color-surface-container);
+    background-color: var(--md-sys-color-surface);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease ease-in-out, box-shadow 0.3s ease ease-in-out;
     padding: 5px;
   
-
 } 
 
 .sCard p{
@@ -674,26 +650,38 @@ section {
 
 .sCard:hover{  
     margin: 1rem;
-    width: 200px;
-    height:200px;;
+    width: 300px;
+    height:100px;;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    justify-content: space-evenly;
+    justify-content:left;
+     box-shadow: 0 0 4px var(--md-sys-color-surface-tint)
   
 
 } 
+
 .sCard h3{
+    width: 50%;
+    justify-self: start;
     text-align: center;
     color: var(--md-sys-color-on-surface);
     font-weight: 500;
-    font-size: var(--subtSize);
-   transition: var(--trans);
+    font-size: var(--text);
+    transition: var(--trans);
+    margin: 1rem;
     
 }
 
 .sCard:hover p{
+    padding-right: 1rem;
     visibility: visible;
     opacity: 1;
     margin-bottom: 1px;
+  
+}
+.sCard:hover h3 ,
+.sCard:hover  p{
+    scale: calc(70%);
+  
 }
 
 #projCard{
@@ -742,10 +730,7 @@ section {
     padding: 0 ;
 }
 
-.sCard:hover{
-    transform: scale(1.02);
-    box-shadow: 0 0 4px var(--md-sys-color-surface-tint)
-}
+
 #skills {
     
     height: 100%;
@@ -753,15 +738,12 @@ section {
     background: linear-gradient(135deg, var(--md-sys-color-on-surface), #9ea8b8 0 31.25%, #0000 0),
     linear-gradient(45deg, var(--md-sys-color-on-surface), #dee1e4 0 31.25%, #0000 0),
     linear-gradient(135deg,var(--md-sys-color-on-surface), hsl(216, 10%, 90%) 0 31.25%, #0000 0),
-    linear-gradient(45deg,var(--md-sys-color-on-surface), #356ca2 0 31.25%, #043c5d00 0);
+    linear-gradient(45deg,var(--md-sys-color-on-surface), var(--md-sys-color-surface-tint) 0 31.25%, #043c5d00 0);
      background-size: 60px 60px;
      
     background-position:
     
-    0 0,
-    0 0,
-    30px 30px,
-    30px 30px;
+    0 0,    0 0,   30px 30px,    30px 30px;
   animation: slide 4s linear infinite;
 }
 
@@ -904,6 +886,26 @@ section {
      letter-spacing: 1px;
      font-family: 'Montserrat' , serif;
    } 
+.projCard .text{
+ font-family: 'Montserrat' , serif;
+  font-size: 14px;
+  line-height: 1.1em;
+  display: block;
+  text-align: start;
+  transition: all 0.3s ease-in-out;
+  text-transform: lowercase;
+  text-decoration: none;
+  transform: translateX(20%);
+}
+.projCard button:hover::before {
+  width: 1.5rem;
+  background: var(--mds-color-primary);
+}
+.projCard button:hover .text {
+  color: var(--md-sys-color-surface);
+  padding-left: 1.5em;
+}
+
 #projects button:hover{
     
   
@@ -1005,6 +1007,7 @@ section {
     width: 100vw;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: center;
     padding: var(--inlinePad);
 
      
@@ -1085,6 +1088,7 @@ margin-right: 20px;
 .firstlinks a:hover {
     color: var(--md-sys-color-on-surface);
       transform: translateX(2%);
+      background-color: var(--md-sys-color-surface-variant);
 }
 
 .firstlinks i {
@@ -1129,6 +1133,10 @@ margin-right: 20px;
   box-shadow: 0px 0px 10px rgba(99, 86, 86, 0.53);
   color: var(--md-sys-color-on-surface);
   background-color: var(--md-sys-color-surface);
+}
+.form label .input:focus,
+.form label .input01:focus{
+background-color: var(--md-sys-color-surface-variant);
 }
 
 .form label .input + span {
@@ -1257,11 +1265,6 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-
 footer p {
  
     
@@ -1270,8 +1273,7 @@ footer p {
 
 }
 
-  /* SUCCESS POPUP
-   ============================================ */
+
 .popup {
     position: fixed;
     top: 0;
@@ -1351,14 +1353,12 @@ footer p {
 
 .popup-close {
     padding: 1rem 3rem;
-    background: #b74b4b;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
+    color:var(--md-sys-color-surface);
+    border-radius: 10px;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease ease-in-out;
 }
 
 .popup-close:hover {
