@@ -731,7 +731,7 @@ section {
     justify-content: center;
     align-items: center;
     margin: 10px;    
-    background-color: var(--md-sys-color-surface);
+    background-color: var(--md-sys-color-surface-container);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease ease-in-out, box-shadow 0.3s ease ease-in-out;
@@ -746,10 +746,10 @@ section {
     text-align: center;
     font-size: 2.2rem;
     font-weight: 500;
-    display: none;
+    opacity: 0;
     transition: var(--trans) ease-in-out;
     z-index: -1000;
-    
+    color: var(--md-sys-color-on-surface);
     
     
 }
@@ -757,7 +757,7 @@ section {
 .servpc i{
     
     font-size: var(--titleSize);
-    transition: var(--transSlow) all ease-in-out;
+    transition:var(--transSlow) ;
     align-self: center;
     justify-self: center;
     text-align: center;   
@@ -777,10 +777,13 @@ section {
 .servpc:hover h3{
     visibility: visible;
     opacity: 1;
+    z-index: 1000;
+ 
 }
 .servpc:hover i{
 
     transform:translateX(50px);
+    transition: ease-in-out;
 }
 
 
@@ -836,7 +839,19 @@ section {
   width: 1.5rem;
   background: var(--mds-color-primary);
 }
-.projCard button:hover .text {
+.projCard button .text{
+    font-family: 'Montserrat' , serif;
+  font-size: 14px;
+  line-height: 1.1em;
+  display: block;
+  text-align: start;
+  transition: all 0.3s ease-in-out;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: var(--md-sys-color-primary);
+  transform: translateX(20%);
+}
+ button span:hover .text {
   color: var(--md-sys-color-surface);
   padding-left: 1.5em;
 }
@@ -846,6 +861,7 @@ section {
   
     background-color: var(--md-sys-color-surface);
     transition: var(--trans);
+    cursor: pointer;
     
    
     
