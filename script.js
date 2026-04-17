@@ -213,15 +213,9 @@ document.addEventListener('DOMContentLoaded', function() {
             successPopup.classList.add('show');
         }
    
-        setTimeout(() => {
-             successPopup.style.display = 'none';
-  }, 3000);
-
-     }
+    }
         
-       setTimeout(() => {
-    showSuccessPopup;
-  }, 500);
+    
   
 
     // CONTACT FORM HANDLER
@@ -242,6 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Form submitted:', data);
             contactForm.reset();
             showSuccessPopup();
+
+            
         });
     }
     
