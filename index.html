@@ -58,7 +58,7 @@
                     <nav id="navbar">
                         <a href="#home" class="active">Home</a>
                         <a href="#about" >About</a>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills">Experience</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>                
                 </nav>
@@ -78,12 +78,12 @@
         <div id="home-content" class="reveal reveal-left delay-2">
           
             <div>
-                <h1><span class="hi"> Hi</span> <br><br>I'm  <span class="name">Caldavis Wangaruro</span></h1> 
+                <pre><h1><span class="hi"> Hi</span> <br><br>I'm  <span class="name">Caldavis Wangaruro</span></h1></pre>
             </div>
                 <br>
                 <div>
-                    <h4>Tech-Creative.</h4>
-                    <h4>A Web designer & web developer.</h4>
+                    <h4 class="desc">Tech-Creative.</h4>
+                    <h4>Web designer & web developer.</h4>
                 </div>
                     
            
@@ -92,7 +92,7 @@
         
     </section>
     <section id="about" class="reveal">
-
+            <h3 class="mada">About Me</h3>
           <div class="reveal reveal-right delay-2 home-img">
                    <img src="pics/IMG_20250306_182343.jpg" alt="Profile Picture">
              </div>
@@ -110,25 +110,30 @@
  <p class="mada exmada" id="">Experience</p>
             <div class="my-serv reveal reveal-top" >
                 <div class="servpc one">            
-                        <h3 id="exptext">HTML</h3><br>
+                        <h3 id="exptext">HTML</h3>
+                        <p>Structure of web pages</p>
                         <i class="fa-brands fa-html5"></i>
                        </div> 
                      <div class="servpc two">
-                        <h3 id="exptext">CSS</h3><br>
+                        <h3 id="exptext">CSS</h3>
+                        <p>Styling web apps , web sites</p>
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
                     <div class="servpc three">
                             <h3 id="exptext">UI/UX</h3>
+                            <p>User experience</p><br>
                             <i class="fa-brands fa-figma"></i>
          
                     </div>
                 <div class="servpc four">
-                                <h3 id="exptext">JS</h3><br>
+                                <h3 id="exptext">JavaScript</h3><br>
+                                <p>Interactivity</p><br>
                                 <i class="fa-brands fa-square-js"></i>
                                    
                 </div>
                 <div class="servpc five">
-                                <h3>REACT</h3><br>
+                                <h3>REACT</h3>
+                                <p>Frontend framework</p>
                                 <i class="fa-brands fa-react"></i>
                                               
                 </div>
@@ -142,21 +147,21 @@
         <div  id="projCards">
         
                 <div  id="projCard" class="reveal reveal-left">
-                    <div class="imgholder">
+                   
                         <img src="pics/Screenshot 2026-04-13 165913.png" alt="FaceBook landing page" width="200px">
-                    </div> 
+                    
                     <p>FaceBook Landing Page</p>
-                    <button><a href="https://fb-flexbox.vercel.app/"><span class="text">View</span></a></button>
+                <a href="https://fb-flexbox.vercel.app/"><span class="text">View</span></a>
                 </div>
                 <div id="projCard" class="reveal reveal-top"> 
                            <img src="pics/js.png" alt="Goal Counter(JavaScript)" width="200px">
                          <p>Goal-Counter Website</p>                
-                        <button><a href="https://passenger-counter-app-gray.vercel.app/"><span class="text">View</span></a></button>
+                    <a href="https://passenger-counter-app-gray.vercel.app/"><span class="text">View</span></a>
                 </div>
                 <div id="projCard" class="reveal reveal-right"> 
                     <img src="pics/Screenshot 2026-04-13 165913.png" alt="FaceBook landing page" width="200px">
-                    <p>Portfolio Templates </p>
-                    <button><a href=""><span class="text">View</span></a></button>
+                    <p>"Next project"</p>
+                <a href=""><span class="text">View</span></a>
                 </div>
           
         
@@ -190,44 +195,41 @@
                                     
                             <form class="form">
                                 
-                                <div class="flex">
-                                    <label>
-                                        <input class="input" type="text" placeholder="" required="">
-                                        <span>First name</span>
-                                    </label>
-
-                                    <label>
-                                        <input class="input" type="text" placeholder="" required="">
-                                        <span>Last name</span>
-                                    </label>
-                                </div>  
-                                        
-                                <label>
-                                    <input class="input" type="email" placeholder="" required="" >
-                                    <span>Email</span>
-                                </label> 
+                             
+                                    <label title="fname">First Name
+                                       
+                                    </label> <input class="input" type="text" placeholder="John" required="" id="fname">
                                     
-                                <label>
-                                    <input class="input" placeholder="" type="tel" required="" maxlength="10">
-                                    <span>Phone number</span>
+
+                                    <label for="lname">Last Name
+                                       
+                                    </label>
+                                     <input class="input" type="text" placeholder="Doe" required=""  id="lname">
+                                      
+                                        
+                                <label for="Email">Email Address                                  
+                                </label> 
+                                 <input class="input" type="email" placeholder="cal@designs.com" required="" >
+                                    
+                                <label for="number">
+                                   Phone Number
+                                 
                                 </label>
+                                 <input class="input" placeholder="Phone Number" type="tel" required="" maxlength="13" id="number">
                                 <label>
-                                    <textarea class="input01" placeholder="" rows="3" required="" max="100"></textarea>
-                                    <span>Message</span>
+                                    
+                                    
                                 </label>
-                                
-                                <button class="fancy">
-                                
-                                <span class="text">submit</span>
-                              
+                                    <label for="message">Message</label>
+                                     <textarea class="input01" placeholder="Type here" rows="3" required="" max="100" id="message"></textarea>
+                                   
+                                <button class="fancy" type="submit">                                
+                               Send
                                 </button>
                             </form>
                     </div>
-                        <div class="popup" id="successPopup">
-                
-
-                                <p>Message Sent Successfully!</p>
-                                <button class="popup-close" id="closePopup">OK</button>
+                        <div class="popup" id="successPopup">           
+                                     <p>Message Sent Successfully!</p>
                             </div>
                                             
                         

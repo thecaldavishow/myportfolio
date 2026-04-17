@@ -1,13 +1,8 @@
-// ============================================
-// PORTFOLIO JAVASCRIPT
-// Complete functionality with scroll reveal animations
-
 
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // ============================================
+
     // THEME TOGGLE 
-    // ============================================
+   
     
         var themeSwitch = document.getElementById('checkboxInput');
         var html = document.documentElement;
@@ -55,10 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
     
     }
-    
-    // ============================================
+
     // MOBILE MENU TOGGLE
-    // ============================================
+   
     
     var mobileMenuBtn = document.getElementById('mobileMenu');
     var navbar = document.getElementById('navbar');
@@ -97,10 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // ============================================
+
     // SMOOTH SCROLL WITH ANIMATIONS
-    // ============================================
+   
     
     var allNavLinks = document.querySelectorAll('nav a[href^="#"]');
     
@@ -147,10 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // ============================================
+
     // SCROLL SPY (Active Navigation)
-    // ============================================
+   
     
     var sections = document.querySelectorAll('section');
     var navAnchors = document.querySelectorAll('nav a[href^="#"]');
@@ -179,10 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
    
 
-    
-    // ============================================
+
     // SCROLL REVEAL ANIMATIONS
-    // ============================================
+   
     
     var revealElements = document.querySelectorAll('.reveal');
     
@@ -200,10 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
     revealElements.forEach(function(element) {
         revealObserver.observe(element);
     });
-    
-    // ============================================
+
     // ANIMATE HOME ON LOAD
-    // ============================================
+   
     
     /* setTimeout(function() {
         var homeElements = document.querySelectorAll('#home .reveal');
@@ -211,41 +201,31 @@ document.addEventListener('DOMContentLoaded', function() {
             el.classList.add('active');
         });
     }, 100); */
-    
-    // ============================================
+
     // SUCCESS POPUP FUNCTIONS
-    // ============================================
+   
     
     var successPopup = document.getElementById('successPopup');
-    var closePopupBtn = document.getElementById('closePopup');
+ 
     
     function showSuccessPopup() {
         if (successPopup) {
             successPopup.classList.add('show');
         }
-    }
-    
-    function hideSuccessPopup() {
-        if (successPopup) {
-            successPopup.classList.remove('show');
-        }
-    }
-    
-    if (closePopupBtn) {
-        closePopupBtn.addEventListener('click', hideSuccessPopup);
-    }
-    
-    if (successPopup) {
-        successPopup.addEventListener('click', function(e) {
-            if (e.target === successPopup) {
-                hideSuccessPopup();
-            }
-        });
-    }
-    
-    // ============================================
+   
+        setTimeout(() => {
+             successPopup.style.display = 'none';
+  }, 3000);
+
+     }
+        
+       setTimeout(() => {
+    showSuccessPopup;
+  }, 500);
+  
+
     // CONTACT FORM HANDLER
-    // ============================================
+   
     
     var contactForm = document.querySelector('#contact form');
     
