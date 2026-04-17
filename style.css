@@ -221,7 +221,7 @@ header {
     background-color: var(--md-sys-color-surface-container-high);
     filter: brightness(1.1);
     filter: opacity(95%);
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     color: var(--md-sys-color-on-surface);
 }
 
@@ -580,6 +580,7 @@ section {
     font-weight: 500;
     line-height: var(--lineH);
     color: white;
+    font-weight: 500;
 }
 #about{
    
@@ -1549,7 +1550,17 @@ footer p {
         width: 65vw;
         max-width: 280px;
     }
-    
+    .ab-text{
+        scale: calc(80%);
+        font-size: var(--text);
+    }
+    #skills .mada{
+        position: relative;
+        top: 0;
+    }
+    .my-serv{
+        scale: calc(80%);
+    }
     nav {
         width: 85%;
     }
@@ -1572,6 +1583,19 @@ footer p {
   
     .contact-info{
         flex-flow: column;
+    }
+    #projects .mada{
+        position: relative;;
+        top: 0;
+        bottom: 0;
+    }
+    #projects{
+        height: fit-content;
+        justify-content: space-around;
+        position: relative;
+    }
+    #projCards{
+        scale: calc(80%);
     }
     
     
@@ -1604,7 +1628,7 @@ footer p {
     }
     
     #home {
-        height: 100vh;
+        height: 100%;
         padding: 8rem 2% ;
         justify-content: center;
     }
@@ -1614,12 +1638,15 @@ footer p {
         font-size: 2rem;
         align-items: center;
         justify-content: center;
-        margin: 0;
+    
     }
     
-    #home-content h1 {
+    #home-content h1{
         font-size: 2rem;
         
+    }
+    .hi{
+        font-size: 2rem;
     }
     #home-content h1 .name
     {   padding: 10px;
@@ -1639,10 +1666,23 @@ footer p {
         padding: 0 1rem;
     }
     
-    .home-img img {
-        width: 70vw;
-        max-width: 250px;
-    }
+  #about{
+
+    position: relative;
+    height: fit-content;
+  }
+  #skills .mada{
+    bottom: 0;
+  }
+  #projects{
+    justify-content: center;
+    align-content: center;
+  }
+  #projects .mada{
+    margin-bottom: 0;
+    position: relative;
+    bottom: 0;
+  }
     
     nav {
         width: 100%;
@@ -1691,13 +1731,24 @@ footer p {
     }
         
     .btn {
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
         font-size: 1.3rem;
     }
-    
-    
-    
-   
+    .form .title{
+        margin: 0;
+        font-size: 16px;
+    }
+    form .form{
+        
+        object-fit: contain;
+        position: relative;
+        height: fit-content;
+        padding: 0 1rem;
+    }
+    .form input{
+        margin-bottom: 0;
+    }
+ 
     
     footer {
         padding: 2rem 2%;
