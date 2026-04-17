@@ -205,16 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // SUCCESS POPUP FUNCTIONS
    
     
-    var successPopup = document.getElementById('successPopup');
- 
-    
-    function showSuccessPopup() {
-        if (successPopup){
-            successPopup.classList.add('show');
-        }
-   
-    }
-        
+
     
   
 
@@ -236,8 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Form submitted:', data);
             contactForm.reset();
 
-            showSuccessPopup();
-
+    
             
             });
             
@@ -245,29 +235,32 @@ document.addEventListener('DOMContentLoaded', function() {
            
           }
 
-    const form = document.getElementById('contactForm');
+
+
+const form = document.getElementById('form');
 const popup = document.getElementById('successPopup');
 
 form.addEventListener('submit', function(event) {
-  // 1. Prevent the default page reload
   event.preventDefault();
 
-  // 2. Optional: Add a small delay to simulate processing
-  // or use it to show the popup AFTER a specific duration
+  // Give the user a 400ms "breather" after clicking submit
   setTimeout(() => {
-    showPopup();
-  }, 500); // 0.5 second delay
+    popup.classList.add('show');
+        // 2. Wait 4 seconds, then hide it automatically
+    setTimeout(() => {
+      closePopup();
+    }, 1500); 
 
-  closePopup();
+  }, 300);
 });
 
-function showPopup() {
-  popup.style.display = 'block';
+function closePopup() {
+  popup.classList.remove('show');
 }
 
-function closePopup() {
-  popup.style.display = 'none';
-}
+
+
+
 
 
     var pageHeader = document.querySelector('header');
