@@ -161,6 +161,8 @@ h2{
 html {
   
     scroll-behavior:smooth;
+   
+
 }
 
 body {
@@ -493,11 +495,13 @@ section {
 #home {
  
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     min-height: 100vh;
-    overflow: hidden; /* Keeps the blurred edges from spilling out */
+    overflow: hidden; 
+    box-shadow: 10px 49px 19px , var(--md-sys-color-on-surface) ;
    
    
     
@@ -522,7 +526,7 @@ section {
     justify-content: space-around;
     width: 100%;
     height: 50vh;
-    max-height: 600px;
+    max-height: 100%;
     padding: 1rem; 
     width: 100%;
   
@@ -552,10 +556,7 @@ section {
     
   
 }
-pre .hi{
-    font-family: 'Montserrat' , serif;
-    color: var(--md-sys-color-primary) ;
-}
+
 #home-content .name{
     font-family: 'Montserrat' , serif;
     font-weight: 600;
@@ -613,10 +614,12 @@ pre .hi{
   z-index: 1;
 }
 #about .mada{
+    position: relative;
     font-size: var(--titleSize);
     color: var(--md-sys-color-on-surface);
     box-shadow:var(--border-color);
-    margin: 2rem ;
+    bottom: 10rem;
+
     }
 #about .home-img {
  
@@ -651,20 +654,22 @@ pre .hi{
 }
  
  #about .ab-text{
-    font-size: var(--text);
+    position: relative;
+    top: 7rem;
+    font-size: var(--subtSize);
     color: var(--md-sys-color-on-surface);
     box-shadow:var(--border-color);
     margin:  0  0  5rem 0;
     text-align: center;
-    line-height: var(--lineH);
+    line-height: 2;
 }
 #projects{
+    position: relative;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--md-sys-color-surface);
-    object-fit: contain;
     height: 100vh;
     background-color: transparent;
     background-image: radial-gradient(var(--md-sys-color-tertiary-container) 1px,var(--md-sys-color-on-secondary-container) 2px);
@@ -672,13 +677,23 @@ pre .hi{
     width: 100%;
     
 }
+#projects .mada{
+    position: relative;
+    
+
+}
 #projCards{
 
+   position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content:space-evenly; 
-    padding: 1rem;
-    margin: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    align-items: center;
+    transition: all var(--trans) ease-in-out;
+    margin-bottom: 2rem;
+    
     
 }
 
@@ -690,12 +705,12 @@ pre .hi{
     border-radius: var(--border-radius);
     overflow: hidden;
     margin: 1rem;
-    width: 350px;
+    width: 300px;
     height:300px;
     justify-content: space-between;
     align-items: center;
     margin: 10px;    
-    background-color: var(--md-sys-color-surface-container-high);
+    background-color: var(--md-sys-color-secondary);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -707,7 +722,7 @@ pre .hi{
     text-align: center;
     font-size: var(--text);
     padding: 0.5rem;
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-surface);
 
     
 }
@@ -720,7 +735,7 @@ pre .hi{
     
 }
 #projCard img{
-    width: 350px;
+    width: 300px;
     transition: var(--trans);
   
   
@@ -741,7 +756,6 @@ pre .hi{
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-
     background: var(--md-sys-color-surface);
   
 
@@ -761,10 +775,10 @@ pre .hi{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 768px;
     align-items: center;
     transition: all var(--trans) ease-in-out;
     margin-bottom: 5rem;
+    bottom: 6rem;
     
     }
 .servpc{  
@@ -777,7 +791,7 @@ pre .hi{
     height:200px;
     justify-content:space-around;
     align-items: center;   
-    background-color: var(--md-sys-color-surface-container);
+    background-color: var(--md-sys-color-secondary);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease ease-in-out, box-shadow 0.3s ease ease-in-out;
@@ -795,14 +809,14 @@ pre .hi{
     font-size: 2.2rem;
     font-weight: 500;
     transition: var(--trans);
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-secondary);
     
     
     
 }
 
 .servpc i{
-    
+    color:var(--md-sys-color-surface-container);
     font-size: var(--titleSize);
     transition:var(--transSlow) ;
     align-self: center;
@@ -818,20 +832,23 @@ pre .hi{
     text-align: center;
     position: relative;  
     font-size: var(--text);
-     
+    color: var(--md-sys-color-on-tertiary-container);
     
 }
 
-#projects h2 {
+#projects .mada {
+    position: relative;
     font-size: var(--titleSize);
     color: var(--md-sys-color-on-surface-container);
     margin-bottom: 2rem;
+    bottom: 10rem;
 
 }
 #projects h3 {
+  
     font-size: 2.2rem;
     text-align: start;
-    margin-bottom: 3rem;
+   
 }
 
 #projects a{
@@ -844,30 +861,33 @@ pre .hi{
     letter-spacing: 1px;
     font-family: 'Montserrat' , serif;
     font-size: 12px;
-    background: var(--md-sys-color-tertiary);
+    background: var(--md-sys-color-secondary-container);
+    width: 40%;
+    color: var(--md-sys-color-on-tertiary);
+    text-align: center;
    } 
 
 
-.projCard button .text{
+.projCard span .text{
     font-family: 'Montserrat' , serif;
-  font-size: 14px;
   line-height: 1.1em;
-  display: block;
-  text-align: start;
+  text-align: center;
   transition: all 0.3s ease-in-out;
   text-transform: lowercase;
   text-decoration: none;
-  color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-surface);
   transform: translateX(20%);
+  font-size: var(--subtSize);
 }
 
 
-#projects button:hover{
+#projects a:hover{
     
   
     background-color: var(--md-sys-color-surface);
     transition: var(--trans);
     cursor: pointer;
+    color: var(--md-sys-color-on-surface);
     
    
     
@@ -943,7 +963,7 @@ pre .hi{
 
 #contact {
     position: relative;
-      object-fit: contain;
+    object-fit: contain;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -956,7 +976,10 @@ pre .hi{
 }
 #contact .mada{
     font-size: var(--titleSize);
-    color: white
+    color: white;
+    position:relative;
+    bottom: 6rem;
+
 }
 
 
@@ -978,8 +1001,8 @@ pre .hi{
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 50%;
-    min-width: 20rem;
+    width: 100%;
+    max-width: 40rem;
     letter-spacing: 0.6px;
     margin: 2rem;
     height: 80%;
@@ -1045,22 +1068,29 @@ margin-right: 25px;
 .form {
     position: relative;
     scale: calc(90%);
-            display: flex;
+    display: flex;
     flex-direction: column;
-        gap: 10px;
-    width: 100%;
-        min-width: 90vw;
+    gap: 10px;
+    width: 50rem;
+    min-width: 20rem;
     max-height: 80vh;
-    height: 70vh;
+    height: 80rem;
     max-width: 40vw;
     min-height: 50vh;
-    background-color:  var(--md-sys-color-surface-container-low);
+    background-color:  var(--md-sys-color-secondary-container);
     padding: 3rem 3rem;
     border-radius: 10px;
     font-style:'Montserrat' , serif;
     justify-content: space-between;
 }
 
+.form .title{
+    color: var(--md-sys-color-on-secondary-container);
+    font-size: 2.5rem;
+    align-self: center;
+    text-align: center;
+    margin: 2rem 1rem;
+}
 
 
 
@@ -1078,7 +1108,7 @@ margin-right: 25px;
   border-radius: 5px;
   box-shadow: 0px 0px 1px rgba(99, 86, 86, 0.53);
   color: var(--md-sys-color-on-surface);
-  background-color: var(--md-sys-color-surface-container-high);
+  background-color: var(--md-sys-color-surface);
 height: 5rem;
 font-family: 'Montserrat' , Serif;
 font-size: 1.6em;
@@ -1090,8 +1120,10 @@ background-color: var(--md-sys-color-surface-container-high);
 box-shadow: 0px 0px 15px var(--md-sys-color-surface);
 }
 .form label{
+    color: var(--md-sys-color-surface-container-low);
     font-size: 16px;
     margin: 0;
+    font-weight: 600;
 }
 .form input{
   left: 10px;
@@ -1102,10 +1134,13 @@ box-shadow: 0px 0px 15px var(--md-sys-color-surface);
   transition: 0.3s ease;
 }
 
-textarea{
+.form .input01{
     height: 10rem;
+    font-size: 1.5em;
 }
-
+.form ::placeholder{
+    color: var(--md-sys-color-on-surface);
+}
 
 .input01 {
   width: 100%;
@@ -1183,25 +1218,29 @@ footer p {
 }
 
 
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-   
+.popup{
+  
+  transform: translate(-50%, -60%) scale(0.9); /* Start slightly higher and smaller */
+  transition: all 0.4s ease-out; /* Smooth transition */
+
+  /* Standard styling */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background:var(--md-sys-color-surface-container-low);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+}
+#successPopup .show{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
 }
 .popup p{
-    color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
     margin: 10px;
   
 }
@@ -1209,7 +1248,7 @@ footer p {
  background-color: var(--md-sys-color-primary-container);
 
 }
-.popup.show {
+.popup .show {
     opacity: 1;
     visibility: visible;
 }
@@ -1271,7 +1310,7 @@ footer p {
 /* MEDIA QUERIES - Desktop (1400px+) */
 @media (min-width: 1400px) {
     html {
-        font-size: 85%;
+        font-size: 70%;
     }
     
     #home {
@@ -1279,28 +1318,50 @@ footer p {
     }
     
     #home #home-content h1 {
-        font-size: 7rem;
+        font-size: 3rem;
     }
     
     #home-content h4 {
-        font-size: 4.5rem;
+        font-size: 1.5rem;
+    }
+    
+    #home-content h4 {
+        font-size: 1.5rem;
     }
     
     .home-img img {
         width: 28vw;
     }
+    .my-serv{
+         justify-content: space-around;
+    }
+    .servpc{
+        width: 250px;
+        height: 250px;
+        margin: 5rem 8rem;
+    }
+ #projCards{
+    bottom: 15%;
+ }
+ #projCard{
+    margin: 0rem 5rem;
+ }
 }
 
 /* MEDIA QUERIES - Large Laptops (1200px - 1399px)*/
 @media (max-width: 1399px) {
     html {
-        font-size: 80%;
+        font-size: 65%;
     }
     
-    .home {
+    #home {
         gap: 6rem;
     }
-    
+     #home-content{
+        display: flex;
+        flex-flow: column ;
+
+    }
     .home-img img {
         width: 35vw;
     }
@@ -1317,14 +1378,19 @@ footer p {
         --section-padding: 5rem 5%;
     }
     
+    #home-content{
+        display: flex;
+        flex-flow: column ;
+
+    }
   
 
-     #home-content h1 {
-        font-size: 5.5rem;
+    #home-content h1 {
+        font-size: 3.5rem;
     }
     
     #home-content h3 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
     
     .home-img img {
@@ -1349,7 +1415,7 @@ footer p {
         background-image: url();
  
     }
-    .home {
+    #home {
         flex-direction: column-reverse;
         text-align: center;
         gap: 4rem;
@@ -1360,7 +1426,7 @@ footer p {
         max-width: 100%;
     }
     
-    .home #home-content h1 {
+    #home #home-content h1 {
         font-size: 5rem;
         margin: 15px;
     }
@@ -1422,7 +1488,17 @@ footer p {
     #skills,
     #projects,
     #contact {
-        padding: 8rem 4%;
+        padding: 5rem 4%;
+    }
+
+    #projCards{
+        
+        height: 100%;
+        scale: calc(90%);
+    }
+    #projCard{
+        
+        margin: 2rem;
     }
 }
 
@@ -1486,6 +1562,10 @@ footer p {
     .projCard{
         scale: calc(1.3);
 
+    }
+    .form{
+
+        min-width: 80vw;
     }
     }
 
@@ -1554,7 +1634,9 @@ footer p {
 /*    MEDIA QUERIES - Standard Phones (480px) */
 @media (max-width: 480px) {
     html {
-        font-size: 50%;
+        width: 100%;
+        margin: 0;
+        font-size: 70%;
     }
     
     :root {
@@ -1575,12 +1657,13 @@ footer p {
     }
     
     #home {
-        padding: 8rem 2% 4rem;
+        height: 100vh;
+        padding: 8rem 2% ;
         justify-content: center;
     }
     
     #home-content{
-        position: relative;
+        
         font-size: 2rem;
         align-items: center;
         justify-content: center;
@@ -1597,8 +1680,11 @@ footer p {
         
     }
     
+    #home-content h4 .desc{
+        font-size: 1.4rem;
+    }
     #home-content h4 {
-        font-size: 1.7rem;
+        font-size: 1.2em;
     }
     
     #home-content p {
@@ -1652,20 +1738,19 @@ footer p {
     
 }
         
+    #projCards {
+       scale: calc(80%);
+       justify-content: center;
+    }
+        
     .btn {
         padding: 1rem 2rem;
         font-size: 1.3rem;
     }
     
-    #contact form input,
-    #contact form textarea {
-        padding: 1.2rem 1.5rem;
-        font-size: 1.4rem;
-    }
     
-    #contact form input[type="submit"] {
-        padding: 1rem 2.5rem;
-    }
+    
+   
     
     footer {
         padding: 2rem 2%;
@@ -1693,11 +1778,15 @@ footer p {
         height: 2px;
     }
     
+    .home-content h1 .name {
+        font-size: 3rem;
+    }
+    
     #home .home-content h1 {
         font-size: 3rem;
     }
     
-    #home-content h3 {
+    #home-content h4 {
         font-size: 2rem;
     }
     
@@ -1733,10 +1822,7 @@ footer p {
 }
     
     
-    .btn {
-        padding: 0.9rem 1.8rem;
-        font-size: 1.2rem;
-    }
+
     
  
 }
@@ -1755,7 +1841,7 @@ footer p {
         font-size: 1.8rem;
     }
     
-    .home-img img {
+    #home-img img {
         width: 80vw;
         max-width: 200px;
     }
@@ -1787,14 +1873,14 @@ footer p {
         padding: 6rem 9% 3rem;
     }
     
-    .home {
+    #home {
         min-height: auto;
         padding: 7rem 9% 3rem;
         flex-direction: row;
         gap: 4rem;
     }
     
-    .home #home-content h1 {
+    #home #home-content h1 {
         font-size: 3.5rem;
     }
     
@@ -1812,9 +1898,7 @@ footer p {
         max-width: 250px;
     }
     
-    .social-icons {
-        margin: 1.5rem 0;
-    }
+  
     
         
     .btn {

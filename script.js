@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
     
     function showSuccessPopup() {
-        if (successPopup) {
+        if (successPopup){
             successPopup.classList.add('show');
         }
    
@@ -235,12 +235,39 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log('Form submitted:', data);
             contactForm.reset();
+
             showSuccessPopup();
 
             
-        });
-    }
-    
+            });
+            
+
+           
+          }
+
+    const form = document.getElementById('contactForm');
+const popup = document.getElementById('successPopup');
+
+form.addEventListener('submit', function(event) {
+  // 1. Prevent the default page reload
+  event.preventDefault();
+
+  // 2. Optional: Add a small delay to simulate processing
+  // or use it to show the popup AFTER a specific duration
+  setTimeout(() => {
+    showPopup();
+  }, 500); // 0.5 second delay
+
+  closePopup();
+});
+
+function showPopup() {
+  popup.style.display = 'block';
+}
+
+function closePopup() {
+  popup.style.display = 'none';
+}
 
 
     var pageHeader = document.querySelector('header');
