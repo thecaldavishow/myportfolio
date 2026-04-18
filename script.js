@@ -263,10 +263,10 @@ function closePopup() {
 
 
 
-    var pageHeader = document.querySelector('header');
+    const pageHeader = document.querySelector('header');
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+    window.addEventListener('scroll',  () => {
+        if (window.scrollY > 770) {
             pageHeader.classList.add('scrolled');
         } else {
             pageHeader.classList.remove('scrolled');
