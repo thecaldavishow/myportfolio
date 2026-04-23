@@ -394,6 +394,8 @@ nav a.active {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+
+
 section {
 
     min-height: 100vh;
@@ -516,7 +518,7 @@ section {
   top: 0; left: 0; right: 0; bottom: 0;
   background-image: url('pics/office.jpg');
   background-size: cover;
-  filter: opacity(75%); 
+  filter: opacity(95%); 
   z-index: -1; 
   transform: scale(1.1);
   overflow: hidden;
@@ -584,7 +586,7 @@ section {
     margin-bottom: 1rem;
     font-weight: 500;
     line-height: var(--lineH);
-    color: white;
+    color:white;
     font-weight: 500;
 }
 #about{
@@ -660,7 +662,7 @@ section {
  
  #about .ab-text{
     position: relative;
-    top: 7rem;
+    top: 4rem;
     font-size:20px;
     color: var(--md-sys-color-on-surface);
     box-shadow:var(--border-color);
