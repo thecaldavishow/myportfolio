@@ -74,6 +74,7 @@
         --inlinePad: 1rem;
         --secMarg: 5rem 0;
         --lineH:2;
+        --spantitle:white;
        
 }
 
@@ -129,6 +130,7 @@
   --md-sys-color-surface-container: rgb(35 41 43);
   --md-sys-color-surface-container-high: rgb(46 51 54);
   --md-sys-color-surface-container-highest: rgb(57 62 65);
+  --spantitle:rgb(220 216 255);
   
  
 
@@ -566,7 +568,7 @@ section {
 #home-content .name{
     font-family: 'Montserrat' , serif;
     font-weight: 600;
-    color: var( --md-sys-color-tertiary);
+    color: var( --spantitle);
     padding: 5px ;
     box-shadow: 0px 0px 10px black;      
       
@@ -674,7 +676,7 @@ section {
    
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--md-sys-color-surface);
     background-color: transparent;
@@ -844,7 +846,7 @@ section {
     font-size: var(--titleSize);
     color: var(--md-sys-color-on-surface-container);
     margin-bottom: 2rem;
-    bottom: 10rem;
+   
 
 }
 #projects h3 {
@@ -981,7 +983,7 @@ section {
     font-size: var(--titleSize);
     color: white;
     position:relative;
-    bottom: 6rem;
+ 
 
 }
 
