@@ -426,12 +426,12 @@ section {
 .fab-button {
   width: 60px;
   height: 60px;
-  background-color: var(--md-sys-color-secondary-container); /* Example primary color */
+  background-color: var(--md-sys-color-tertiary-container); /* Example primary color */
   border: none;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 0px 7px var(--md-sys-color-on-surface-high);
+  box-shadow: 0 0px 7px var(--md-sys-color-surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,11 +441,11 @@ section {
 
 
 .fab-button:hover {
- background-color: var(--md-sys-color-secondary);
+ background-color: var(--md-sys-color-surface-container-highest);
   transform: scale(1.05);
 }
  .fab-button i{
-    color: var(--md-sys-color-surface);
+    color: var(--spantitle);
  }
 
 .tooltip {
