@@ -75,6 +75,8 @@
         --secMarg: 5rem 0;
         --lineH:2;
         --spantitle:white;
+        --hi:rgb(217 221 225);
+        --tertiary:white
        
 }
 
@@ -131,6 +133,8 @@
   --md-sys-color-surface-container-high: rgb(46 51 54);
   --md-sys-color-surface-container-highest: rgb(57 62 65);
   --spantitle:rgb(220 216 255);
+  --hi:rgb(171 228 255);
+  --tertiary:white
   
  
 
@@ -343,6 +347,8 @@ nav a {
     color: white;
     transition: var(--trans) ease-in-out;
     font-weight: 500;
+    padding: 0px 5px;
+    border-radius: 50px;
    
 }
 
@@ -350,8 +356,9 @@ nav a {
 
 nav a:hover {
     transition: all ease-in-out;
-    color: var(--md-sys-color-primary); 
-    border-bottom: 2px solid var(--md-sys-color-surface-variant);
+    box-shadow: 0px 0px 8px 0px var(--md-sys-color-on-primary-container);
+    color: var(--tertiary); 
+    border-bottom: 2px solid var(--md-sys-color-tertiary);
       
 
 }
@@ -550,7 +557,7 @@ section {
     
 }
  #home-content h1 {
-    color: var(--md-sys-color-primary);
+    color: var(--hi);
     font-weight: 500;
     margin:  20px;
     font-size: var(--titleSize);
