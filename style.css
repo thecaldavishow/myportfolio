@@ -180,21 +180,20 @@ body {
     color: var(--md-sys-color-on-surface);
 
 }
-/* Elements start hidden */
+
 .reveal {
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
-/* Different animation directions */
-.reveal-left   { transform: translateX(-100px); }  /* From LEFT */
-.reveal-right  { transform: translateX(100px); }   /* From RIGHT */
-.reveal-top    { transform: translateY(-100px); }   /* From TOP */
-.reveal-bottom { transform: translateY(100px); }    /* From BOTTOM */
-.reveal-scale  { transform: scale(0.8); }          /* Scale IN */
-.reveal-rotate { transform: rotate(-10deg); }       /* Rotate IN */
 
-/* When visible - animate to position */
+.reveal-left   { transform: translateX(-100px); }  
+.reveal-right  { transform: translateX(100px); }   
+.reveal-top    { transform: translateY(-100px); }   
+.reveal-bottom { transform: translateY(100px); } 
+.reveal-scale  { transform: scale(0.8); }        
+.reveal-rotate { transform: rotate(-10deg); }      
+
 .reveal.active {
     opacity: 1;
     transform: translate(0) scale(1) rotate(0);
@@ -232,7 +231,7 @@ header {
     color: var(--md-sys-color-on-surface);
 }
 header.scrolled nav a {
-  color:var(--md-sys-color-primary) /* Darker color when background is white */
+  color:var(--md-sys-color-primary);
 }
 
     
@@ -248,10 +247,14 @@ header.scrolled nav a {
   position: relative;
   place-items: center;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   line-height: 1;
   overflow: hidden;
 scale: calc(92%);
+box-shadow: 0px 0px 10px 0px white;
+}
+.toggleSwitch:hover{
+    scale: calc(0.97);
 }
 
 .sun{
@@ -690,6 +693,8 @@ section {
     background-image: radial-gradient(var(--md-sys-color-tertiary-container) 1px,var(--md-sys-color-on-secondary-container) 2px);
     background-size: 30px 30px;
     width: 100%;
+    height: 100vh;
+    padding: 0px;
     
 }
 
@@ -699,8 +704,7 @@ section {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    width: 100%;
-    max-width: 100vw;
+    max-width: 100%;
     align-items: center;
     transition: all var(--trans) ease-in-out;
     margin-bottom: 2rem;
@@ -711,22 +715,23 @@ section {
 
 #projCard{
     
-   position: relative;
+
     display: flex;
     flex-flow: column nowrap;
     border-radius: var(--border-radius);
-    overflow: hidden;
+
     margin: 1rem;
-    width: 280px;
-    height:250px;
+    width: 400px;
+    height:400px;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;    
+    margin: 5rem;    
     background-color: var(--md-sys-color-secondary);
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
+    padding-bottom: 2rem;
+  overflow: hidden;
     
 
 } 
@@ -738,24 +743,26 @@ section {
 
     
 }
-#projCard a{
-    text-align: left;
-    font-size: var(--text);
-    padding: 0.5rem;
-    color: var(--md-sys-color-tertiary);
 
-    
-}
 #projCard img{
-    width: 300px;
+   width: 400px;
     transition: var(--trans);
+
+   object-fit: contain;
+   
+
+   
+  
   
   
 }
-
+.imglink{
+    text-decoration: none;
+}
 #projCard img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
+    border-radius: 10px;
 }
  h2 , h3{
     margin-bottom: 10px;
@@ -769,7 +776,7 @@ section {
     justify-content: space-around;
     align-items: center;
     background: var(--md-sys-color-surface);
-  
+    padding: 0;
 
   
 }
@@ -791,6 +798,8 @@ section {
     transition: all var(--trans) ease-in-out;
     margin-bottom: 5rem;
     bottom: 6rem;
+    width: 100%;
+    
     
     }
 .servpc{  
@@ -835,6 +844,7 @@ section {
     justify-self: center;
     text-align: center;
     position: absolute;  
+
      
     
 }
@@ -845,7 +855,7 @@ section {
     position: relative;  
     font-size: var(--text);
     color: var(--md-sys-color-on-tertiary-container);
-    
+    max-width: 80%;
 }
 
 #projects .mada {
@@ -863,7 +873,7 @@ section {
    
 }
 
-#projects a{
+#projects .view{
     align-self: center;
     margin: 1rem;
     line-height: 1.1em;
@@ -873,27 +883,25 @@ section {
     letter-spacing: 1px;
     font-family: 'Montserrat' , serif;
     font-size: 12px;
-    background: var(--md-sys-color-secondary-container);
+    background: var(--md-sys-color-primary-container);
     width: 40%;
     color: var(--md-sys-color-on-tertiary);
     text-align: center;
    } 
 
 
-.projCard span .text{
-    font-family: 'Montserrat' , serif;
+#projCard  .text{
+font-family: 'Montserrat' , serif;
   line-height: 1.1em;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  text-transform: lowercase;
   text-decoration: none;
-  color: var(--md-sys-color-on-surface);
-  transform: translateX(20%);
-  font-size: var(--subtSize);
+  color: white;
+ 
 }
 
 
-#projects a:hover{
+#projects .view:hover{
     
   
     background-color: var(--md-sys-color-surface);
@@ -905,13 +913,7 @@ section {
     
 }
 
-#projects  a{
-   
-   text-decoration: none;
-   background-color: var(--md-sys-color-tertiary-container);
 
-
-}
 
 .footer-content{
     display: flex;
@@ -967,7 +969,7 @@ section {
   background-position: center;
   
   /* Apply your filters here */
-  filter: blur(1px) brightness(0.7) grayscale(80%) opacity(80%);
+  filter: blur(1px) brightness(0.8) grayscale(90%) opacity(85%);
   
   /* Push it to the background layer */
   z-index: -1;
@@ -1027,24 +1029,26 @@ margin-right: 25px;
 }
 .firstlinks a{
     display: flex;
-    background-color:  var(--md-sys-color-tertiary);
+    background-color:  var(--md-sys-color-surface-container-lowest);
     box-shadow: 0 0px 5px rgba(255, 255, 255, 0.183);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 5rem;
+    transition: 0.3s ease;
+   
+    height: 10rem;
     width:90%;
     text-align: start;
     text-decoration: none;
     margin-bottom: 1.5rem;
     justify-content: space-between;
     align-self: center;
-    margin: 10px;
+    
     font-family: 'Montserrat' , serif;
     font-size: 1.7rem;
     border-radius: var(--border-radius);
     margin: 5px;
-    color: var(--md-sys-color-on-tertiary);  
-    padding: 1rem;
+    color: var(--md-sys-color-on-surface);  
+    padding: 1rem 2rem;
     transition: all 0.3s ease-in-out;
+    align-items: center;
  
 
 }
@@ -1088,7 +1092,7 @@ margin-right: 25px;
     height: 80rem;
     min-width: 40vw;
     min-height: 20vh;
-    background-color:  var(--md-sys-color-secondary);
+    background-color:  var(--md-sys-color-surface);
     padding: 2.5rem 2.5rem;
     border-radius: 10px;
     font-style:'Montserrat' , serif;
@@ -1100,6 +1104,7 @@ margin-right: 25px;
     font-size: 16px;
     text-align: center;
     margin: 2rem 2rem;
+
 }
 
 
@@ -1114,7 +1119,7 @@ margin-right: 25px;
   border-radius: 5px;
   box-shadow: 0px 0px 1px rgba(99, 86, 86, 0.53);
   color: var(--md-sys-color-on-surface);
-  background-color: var(--md-sys-color-surface);
+  background-color: var(--md-sys-color-surface-container-low);
 height: 5rem;
 font-family: 'Montserrat' , Serif;
 font-size: 1.6em;
@@ -1127,7 +1132,7 @@ background-color: var(--md-sys-color-surface);
 box-shadow: 0px 0px 15px var(--md-sys-color-surface);
 }
 .form label{
-    color: var(--md-sys-color-surface-container-low);
+    color: var(--md-sys-color-on-surface);
     font-size: 16px;
     margin: 0;
     font-weight: 600;
@@ -1296,6 +1301,20 @@ footer p {
     .home-img img {
         width: 35vw;
     }
+    #projCards{
+        scale: calc(90%);
+        margin-bottom: 0px;
+   
+
+    }
+    #projCard{
+        width:300px
+
+    }
+    #projCard img{
+        width:300px
+
+    }
 }
 
 /* Laptops (992px - 1199px)*/
@@ -1331,6 +1350,7 @@ footer p {
     nav a {
         margin-left: 2.5rem;
     }
+    
 }
 
 /* Tablets Landscape (992px)  */
@@ -1426,12 +1446,22 @@ footer p {
         
 
         scale: calc(100%);
+        flex-flow: row;
+        height: 80%;
+        width: 100%;
+       
     }
     #projCard{
         
-        margin: 2rem;
-        scale: calc(70%);
+
+       flex-flow: column;
+       margin: 2rem;
+       height: 40%;
+       
+      
+       
     }
+
 }
 
 /* MEDIA QUERIES - Tablets Portrait (768px) */
@@ -1484,21 +1514,18 @@ footer p {
     .form{
         width: 80%;
     }
-    .projCards{
+    #projCards{
        
-        padding: 5rem 2rem;
+       
+        flex-flow: row;
         
 
     }
-      #projCards{
-        
-
-        scale: calc(80%);
-    }
+ 
     #projCard{
         
         margin: 2rem;
-        scale: calc(70%);
+       
     }
   
     .form{
@@ -1586,6 +1613,7 @@ footer p {
     }
     #projCards{
         scale: calc(100%);
+        flex-flow: column;
     }
     
     .firstlinks a ,
