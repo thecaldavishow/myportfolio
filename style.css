@@ -419,8 +419,8 @@ section {
 /* Container to position the button */
 .fab-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom:4rem;
+  right: 4rem;
   z-index: 1000; /* Ensure it stays above other content */
  transition: all 0.2s ease-in-out;
 }
@@ -456,6 +456,7 @@ section {
   position: absolute;
   top: 40%;
   right: 5%;
+  
   transform: translateX(-50%);
   padding: 1em;
   opacity: 0;
@@ -469,6 +470,7 @@ section {
   width: 30rem;
   z-index: -100;
   font-size: var(--text);
+ 
 }
 
 .tooltip::before {
@@ -476,14 +478,16 @@ section {
   content: "";
   height: 0.6em;
   width: 0.6em;
-  left: 50%;
+  left: 100%;
+  visibility: hidden;
   transform: translate(-50%) rotate(45deg) ;
   background: var(--background);
+  opacity: 0;
 }
 
 .fab-container:hover .tooltip {
     scale: calc(90%);
-  top: -200%;
+  top: -300%;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
