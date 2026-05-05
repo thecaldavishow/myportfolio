@@ -1,9 +1,151 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+:root {
+    /* (Default) pallete /colors*/
+
+        --md-sys-color-background: rgb(246 250 253);
+        --md-sys-color-on-background: rgb(23 28 31);
+        --md-sys-color-surface: rgb(246 250 253);
+        --md-sys-color-on-surface: rgb(13 18 20);
+        --md-sys-color-surface-container: rgb(228 233 236);
+        --md-sys-color-primary: rgb(0 59 77);
+        --md-sys-color-surface-tint: rgb(16 102 129);
+        --md-sys-color-on-primary: rgb(255 255 255);
+        --md-sys-color-primary-container: rgb(40 117 145);
+        --md-sys-color-on-primary-container: rgb(255 255 255);
+        --md-sys-color-secondary: rgb(36 57 66);
+        --md-sys-color-on-secondary: rgb(255 255 255);
+        --md-sys-color-secondary-container: rgb(91 112 122);
+        --md-sys-color-on-secondary-container: rgb(255 255 255);
+        --md-sys-color-tertiary: rgb(52 51 83);
+        --md-sys-color-on-tertiary: rgb(255 255 255);
+        --md-sys-color-tertiary-container: rgb(107 106 141);
+        --md-sys-color-on-tertiary-container: rgb(255 255 255);
+        --md-sys-color-error: rgb(116 0 6);
+        --md-sys-color-on-error: rgb(255 255 255);
+        --md-sys-color-error-container: rgb(207 44 39);
+        --md-sys-color-on-error-container: rgb(255 255 255);
+        --md-sys-color-surface-variant: rgb(220 228 233);
+        --md-sys-color-on-surface-variant: rgb(48 55 59);
+        --md-sys-color-outline: rgb(76 84 88);
+        --md-sys-color-outline-variant: rgb(102 110 115);
+        --md-sys-color-shadow: rgb(0 0 0);
+        --md-sys-color-scrim: rgb(0 0 0);
+        --md-sys-color-inverse-surface: rgb(44 49 52);
+        --md-sys-color-inverse-on-surface: rgb(237 241 245);
+        --md-sys-color-inverse-primary: rgb(138 208 239);
+        --md-sys-color-primary-fixed: rgb(40 117 145);
+        --md-sys-color-on-primary-fixed: rgb(255 255 255);
+        --md-sys-color-primary-fixed-dim: rgb(0 92 118);
+        --md-sys-color-on-primary-fixed-variant: rgb(255 255 255);
+        --md-sys-color-secondary-fixed: rgb(91 112 122);
+        --md-sys-color-on-secondary-fixed: rgb(255 255 255);
+        --md-sys-color-secondary-fixed-dim: rgb(67 88 98);
+        --md-sys-color-on-secondary-fixed-variant: rgb(255 255 255);
+        --md-sys-color-tertiary-fixed: rgb(107 106 141);
+        --md-sys-color-on-tertiary-fixed: rgb(255 255 255);
+        --md-sys-color-tertiary-fixed-dim: rgb(83 81 115);
+        --md-sys-color-on-tertiary-fixed-variant: rgb(255 255 255);
+        --md-sys-color-surface-dim: rgb(194 199 202);
+        --md-sys-color-surface-bright: rgb(246 250 253);
+        --md-sys-color-surface-container-lowest: rgb(255 255 255);
+        --md-sys-color-surface-container-low: rgb(240 244 248);
+        --md-sys-color-surface-container-high: rgb(217 221 225);
+        --md-sys-color-surface-container-highest: rgb(206 210 214);
+        --box-shadow: 0 0  10px;
+        --section-padding: 0 20%;
+        --titleAlgn:center;
+        --titleSize:30px;
+        --subtSize: 24px;
+        --navText:16px;
+        --text:18px;
+        --trans:0.3s ease;
+        --transQuick:0.1s ease;
+        --transSlow: 0.5s ease;
+        --border: 1px solid var( --md-sys-color-on-surface-variant);
+        --border-color:(var(--md-sys-color-outline));
+        --border-radius: 10px;
+        --header-padding:20px;
+        --boxShadow:0 0 5px var(--md-sys-color-outline);
+        --padCards: 5rem;
+        --inlinePad: 1rem;
+        --secMarg: 5rem 0;
+        --lineH:2;
+        --spantitle:white;
+        --hi:rgb(217 221 225);
+        --tertiary:white;
+       
+}
+
+
+/* Dark mode palletes*/
+[data-theme="dark"] {
+  --md-sys-color-background: rgb(15 20 23);
+  --md-sys-color-on-background: rgb(223 227 230);
+  --md-sys-color-surface: rgb(15 20 23);
+  --md-sys-color-on-surface: rgb(255 255 255);
+  --md-sys-color-surface-variant: rgb(64 72 76);
+  --md-sys-color-primary: rgb(171 228 255);
+  --md-sys-color-surface-tint: rgb(138 208 239);
+  --md-sys-color-on-primary: rgb(0 42 55);
+  --md-sys-color-primary-container: rgb(82 153 182);
+  --md-sys-color-on-primary-container: rgb(0 0 0);
+  --md-sys-color-secondary: rgb(201 224 236);
+  --md-sys-color-on-secondary: rgb(19 40 49);
+  --md-sys-color-secondary-container: rgb(126 148 159);
+  --md-sys-color-on-secondary-container: rgb(0 0 0);
+  --md-sys-color-tertiary: rgb(220 216 255);
+  --md-sys-color-on-tertiary: rgb(35 34 65);
+  --md-sys-color-tertiary-container: rgb(143 141 178);
+  --md-sys-color-on-tertiary-container: rgb(0 0 0);
+  --md-sys-color-error: rgb(255 210 204);
+  --md-sys-color-on-error: rgb(84 0 3);
+  --md-sys-color-error-container: rgb(255 84 73);
+  --md-sys-color-on-error-container: rgb(0 0 0);
+  --md-sys-color-on-surface-variant: rgb(214 221 226);
+  --md-sys-color-outline: rgb(171 179 184);
+  --md-sys-color-outline-variant: rgb(137 145 150);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(223 227 230);
+  --md-sys-color-inverse-on-surface: rgb(38 43 45);
+  --md-sys-color-inverse-primary: rgb(0 78 101);
+  --md-sys-color-primary-fixed: rgb(188 233 255);
+  --md-sys-color-on-primary-fixed: rgb(0 19 28);
+  --md-sys-color-primary-fixed-dim: rgb(138 208 239);
+  --md-sys-color-on-primary-fixed-variant: rgb(0 59 77);
+  --md-sys-color-secondary-fixed: rgb(208 230 242);
+  --md-sys-color-on-secondary-fixed: rgb(0 19 28);
+  --md-sys-color-secondary-fixed-dim: rgb(180 202 213);
+  --md-sys-color-on-secondary-fixed-variant: rgb(36 57 66);
+  --md-sys-color-tertiary-fixed: rgb(226 223 255);
+  --md-sys-color-on-tertiary-fixed: rgb(14 13 44);
+  --md-sys-color-tertiary-fixed-dim: rgb(197 194 234);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(52 51 83);
+  --md-sys-color-surface-dim: rgb(15 20 23);
+  --md-sys-color-surface-bright: rgb(64 69 72);
+  --md-sys-color-surface-container-lowest: rgb(4 8 10);
+  --md-sys-color-surface-container-low: rgb(25 30 33);
+  --md-sys-color-surface-container: rgb(35 41 43);
+  --md-sys-color-surface-container-high: rgb(46 51 54);
+  --md-sys-color-surface-container-highest: rgb(57 62 65);
+  --spantitle:rgb(220 216 255);
+  --hi:rgb(171 228 255);
+  --tertiary:white;
+
+  
+ 
+
+
+}
+
+
 *,body{
   font-family: 'Montserrat', serif;
 }
+
 #headcontent{
   display: flex;
   flex-flow: row;
@@ -12,7 +154,7 @@
 
 }
 #hamburgericon {
-display: none;
+display: flex;
 flex-flow: column nowrap;
 }
 #hamburgericon span{
@@ -20,6 +162,9 @@ flex-flow: column nowrap;
   height: 3px;
   background-color: black;
   margin: 1px;
+}
+section{
+  height: 100vh;
 }
 #center {
   display: flex;
@@ -36,23 +181,29 @@ flex-flow: column nowrap;
   }
 }
 #home{
-  width: 100vw;
+  position: relative;
   height: 100vh;
+  width: 100vw;
+
+
 }
-#home::before {
-  content: "";
+
+#home::before{
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image:  url(/reactportfolio/src/assets/office.jpg);
+  content: "";
+  background-image: url(/reactportfolio/src/assets/office.jpg);
   background-size: cover;
-  filter: opacity(95%); 
-  z-index: -1; 
-  transform: scale(1.1);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  z-index: -1;
   overflow: hidden;
-  max-height: 100vh;
 }
 #navbar {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   
 
@@ -68,5 +219,28 @@ flex-flow: column nowrap;
   height: 30px;
   cursor: pointer;
   
+}
+
+
+#about p{
+  line-height: var(--lineH);
+}
+
+#projcardholder{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.projcard{
+  width: 30%;
+  height: 100%;
+  background-color:var(--md-sys-color-on-secondary-container);
+  border: 2px solid;
+  margin: 1rem;
+}
+.projcard p{
+ text-align: center;
+ margin: 10px;
 }
 
