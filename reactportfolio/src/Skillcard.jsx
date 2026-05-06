@@ -1,12 +1,14 @@
-export default function Skillcard(){
+export default function Skillcard( {skilltitle , skillsrc , skilltext}){
+
+  
     return(
         <div id="skillcard">
-            <h3></h3>
-            <img src=""
-                 alt=""
-                 width={10}
-                 height={10} />
-            <p></p>
+            <h3>{skilltitle}</h3>
+             <i className={skillsrc}></i>
+            <p style={
+                {textAlign:"center",
+                                }
+                        }>{skilltext}</p>
         </div>
     );
 }

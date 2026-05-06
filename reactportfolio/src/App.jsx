@@ -55,8 +55,31 @@ function App() {
       <section id='experience'>
          <h2>Skills</h2>
         <div id="skillholder">
-          <Skillcard 
-          skilltitle/>
+          <Skillcard
+          skilltitle={"HTML"}
+          skillsrc={"fa-brands fa-html5"} 
+         skilltext={"Constructing websites from the basis."}
+         />
+          <Skillcard
+          skilltitle={"CSS"}
+          skillsrc={"fa-brands fa-html5"} 
+         skilltext={"Styling web apps , web sites to suite your intersets"}
+         />
+          <Skillcard
+          skilltitle={"UI/UX"}
+          skillsrc={"fa-brands fa-html5"} 
+         skilltext={"Constructing websites from the basis."}
+         />
+          <Skillcard
+          skilltitle="JAVASCRIPT"
+          skillsrc="fa-brands fa-square-js"
+         skilltext={"Constructing websites from the basis."}
+         />
+          <Skillcard
+          skilltitle="HTML"
+          skillsrc="fa-brands fa-react"
+         skilltext="Interactivity to the websites"
+         />
 
         </div>
       </section>
@@ -67,13 +90,16 @@ function App() {
         <div id='projcardholder'>
 
           <Projectcard
-            title ="Facebook Landing Page"/>
+          projimg=""
+            projtitle="Facebook Landing Page"/>
 
           <Projectcard
-            title ="My Portfolio"/>
+           projimg=""
+            projtitle ="My Portfolio"/>
 
           <Projectcard
-          title="Google Mybusiness Landing Page"/>
+           projimg="reactportfolio\src\assets\googlemybiz.png"
+          projtitle="Google Mybusiness Landing Page"/>
         
         </div>
       </section>
@@ -82,11 +108,23 @@ function App() {
         <h2>Let's talk</h2>
         <div id="contactlinks">
             <Contactlink 
-            
+              socsrc={"fab fa-github"}
+              soclink={"https://github.com/thecaldavishow"}
+              soctitle={"Github"}
+      
              />
-            <Contactlink/>
-            <Contactlink/>
-            <Contactlink/>
+            <Contactlink
+               socsrc={"fab fa-GMAILmail"}
+               soctitle={"GMAIL"}/>
+
+            <Contactlink 
+            socsrc={"fab fa-instagram"}
+            soctitle={"instagram"}/>
+
+            <Contactlink
+            socsrc={"fab fa-Linkedin"}
+            soctitle={"Linkedin"}/>
+          
         
         </div>
     <Form/>

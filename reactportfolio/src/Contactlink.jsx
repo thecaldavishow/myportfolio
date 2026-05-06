@@ -1,14 +1,12 @@
-export default function Contactlink({ title , source}){
+export default function Contactlink({ soclink , soctitle , socsrc}){
 
-    const soctitle = " "
+ 
+    
     return(
 
-        <div>
-            <img src=""
-                 alt="social icon"
-                 width={20} 
-            />
-            <a href="">{soctitle}</a>
+        <div id="contlink">
+           <i className={socsrc}></i>
+            <a href={soclink}>{soctitle}</a>
         </div>
     );
 }

@@ -156,6 +156,8 @@
 #hamburgericon {
 display: flex;
 flex-flow: column nowrap;
+ margin: 0.5rem;
+margin-right: 1rem;
 }
 #hamburgericon span{
   width: 20px;
@@ -163,6 +165,28 @@ flex-flow: column nowrap;
   background-color: black;
   margin: 1px;
 }
+#navbar {
+  display: none;
+  flex-flow: row nowrap;
+  
+
+}
+#navbar a{
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+#themeswitch{
+  border-radius:100px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0.5rem;
+  margin-left: 1rem;
+
+  
+}
+
 section{
   height: 100vh;
 }
@@ -175,13 +199,16 @@ section{
   flex-grow: 1;
   background: none;
  
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+
+}
+#center h4{
+  text-align: center;
+  margin: 0.5rem;
+  color: var(--tertiary);
 }
 #home{
   position: relative;
+  display: flex;
   height: 100vh;
   width: 100vw;
 
@@ -202,28 +229,24 @@ section{
   z-index: -1;
   overflow: hidden;
 }
-#navbar {
-  display: none;
-  flex-flow: row nowrap;
-  
 
+#about {
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ justify-content: space-evenly;
 }
-#navbar a{
-  text-decoration: none;
-  color: black;
-  margin: 10px;
-}
-#themeswitch{
-  border-radius:100px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  
+#about img{
+  width: 200px;
+  border-radius: 100px;
 }
 
 
 #about p{
   line-height: var(--lineH);
+  max-width: 90%;
+  text-align: center;
+  font-size: var(--text);
 }
 
 #projcardholder{
@@ -231,16 +254,107 @@ section{
   flex-flow: column;
   align-items: center;
 }
+#skillholder{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+#skillcard{
+  border: 2px solid black;
+  border-radius:16px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  background-color: var(--md-sys-color-secondary-container);
+  margin-bottom: 10px;
+   padding: 1rem;
+}
+#skillcard i{
+  font-size: 30px;
+}
 
+#projects{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#projcardholder{
+  height: 80%;
+}
 .projcard{
-  width: 30%;
+  width: 70%;
   height: 100%;
   background-color:var(--md-sys-color-on-secondary-container);
   border: 2px solid;
+  border-radius: 16px;
   margin: 1rem;
+  padding: 10px 20px;
+  height: 100%;
 }
-.projcard p{
- text-align: center;
- margin: 10px;
+.projcard img {
+  width: 100%;
+}
+.projcard h5{
+  font-weight: 550;
+  font-size: var(--text);
+  margin: 10px 0px;
+  
+}
+.projcard a{
+  font-size: var(--text);
+ text-decoration: none;
+ 
+}
+#contact{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#contlink{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 70%;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+#contactlinks{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+#contactlinks a{
+  text-decoration: none;
+  color:black;
+}
+#form{
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  gap: 10px;
+  box-shadow: 0px 0px 5px 0px rgb(180, 180, 149);
+  padding:15px 20px;
+}
+#form input{
+  border: 1px solid;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+#formbtn{
+  padding: 15px;
+  width: 50%;
+  align-self:center;
+  border-radius: 5px;
+  margin: 1rem;
 }
 
